@@ -1,0 +1,3 @@
+[submodule "shared_content"]
+	path = shared_content
+	url = ssh://git@mad-cad.net/~/repositories/shared_content.git
