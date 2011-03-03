@@ -10,6 +10,7 @@
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* lionheart.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* lionheart.1 */; };
 		B3730C31131FC0EE0018E045 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3730C30131FC0EE0018E045 /* libboost_system.dylib */; };
+		B3730C37131FC20A0018E045 /* libboost_program_options.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3730C36131FC20A0018E045 /* libboost_program_options.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* lionheart */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lionheart; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3730C30131FC0EE0018E045 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = shared_content/lib/macosx/libboost_system.dylib; sourceTree = "<group>"; };
+		B3730C36131FC20A0018E045 /* libboost_program_options.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_program_options.dylib; path = shared_content/lib/macosx/libboost_program_options.dylib; sourceTree = "<group>"; };
 		C6859E8B029090EE04C91782 /* lionheart.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lionheart.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3730C31131FC0EE0018E045 /* libboost_system.dylib in Frameworks */,
+				B3730C37131FC20A0018E045 /* libboost_program_options.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,7 @@
 		B3730C2D131FC0E00018E045 /* External libs */ = {
 			isa = PBXGroup;
 			children = (
+				B3730C36131FC20A0018E045 /* libboost_program_options.dylib */,
 				B3730C30131FC0EE0018E045 /* libboost_system.dylib */,
 			);
 			name = "External libs";
