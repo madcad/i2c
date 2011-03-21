@@ -18,12 +18,19 @@
 #include <iostream>
 #include <iterator>
 #include <string>
-#include <boost/asio.hpp>
 #include "OptionParser.h"
-#include "Server.h"
+
 
 using namespace std;
 
+/**
+* @brief Main function to start lionhearth.
+*
+* @param argc   Argument Counter.
+* @param argv[] Argument Values.
+*
+* @return int
+*/
 int main (int argc, char * const argv[]) {
     // insert code here...
     const string usage = "usage: %prog [OPTION]... DIR [FILE]...";
@@ -39,21 +46,17 @@ int main (int argc, char * const argv[]) {
         .version(version)
         .description(desc);
 
-        parser.add_option("-h") .action("help") .help("alternative help");
-        parser.add_option("-v") .action("version") .help("alternative version");
+        parser.add_option("-h").action("help").help("alternative help");
+        parser.add_option("-v").action("version").help("alternative version");
 
         optparse::Values& options = parser.parse_args(argc, argv);
         vector<string> args = parser.args();
-        
-        boost::asio::io_service io_service;
-        Server server(io_service);
-        io_service.run();
-        
+
         if (argc == 0) {
             parser.print_help();
             return 1;
         }
-        
+
     } catch (exception& e) {
         cerr << "error: " << e.what() << "\n";
         return 1;
