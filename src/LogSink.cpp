@@ -14,19 +14,38 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include "Connection.h"
-#pragma once
-using boost::asio::ip::tcp;
+#include "LogSink.h"
 
-class Server {
-public:
-    Server(boost::asio::io_service& io_service, int port = 1337);
-private:
-    tcp::acceptor _acceptor;
-    
-    void start_accept();
-    void handle_accept(Connection::pointer new_connection,
-                       const boost::system::error_code& error);
-};
+LogSink::LogSink(const std::string& name) :
+    m_Name(name)
+{
+}
+
+LogSink::~LogSink()
+{
+}
+
+std::string LogSink::getName() const
+{
+    return this->m_Name;
+}
+
+ConsoleSink::ConsoleSink(const std::string& name) :
+    LogSink(name)
+{
+}
+
+ConsoleSink::~ConsoleSink()
+{
+}
+
+void ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
+{
+    static const char* pre[] = { "    NOTE: ",
+                           " VERBOSE: ",
+                           " WARNING: ",
+                           "   ERROR: ",
+                           "CRITICAL: " };
+
+    std::cerr << pre[static_cast<int>(level)] << msg << std::endl;
+}
