@@ -19,6 +19,8 @@
 #include <iterator>
 #include <string>
 #include "OptionParser.h"
+#include "Log.h"
+#include "LogSink.h"
 
 
 using namespace std;
@@ -33,14 +35,20 @@ using namespace std;
 */
 int main (int argc, char * const argv[]) {
     // insert code here...
+    Log log;
+    log.addSink(LogSinkPtr(new ConsoleSink("out")));
     const string usage = "usage: %prog [OPTION]... DIR [FILE]...";
+
     const string version = "%prog 0.0.1\nCopyright (C) 2011 mad-cad.net\n"
     "License GPLv3+: GNU GPL version 3 or later "
     "<http://gnu.org/licenses/gpl.html>.\n"
     "This is free software: you are free to change and redistribute it.\n"
     "There is NO WARRANTY, to the extent permitted by law.";
+
     const string desc = "Missing description.";
     try {
+        log.note() << "Hallo Welt";
+        log.verbose() << "Verbose";
         optparse::OptionParser parser = optparse::OptionParser()
         .usage(usage)
         .version(version)
@@ -49,7 +57,8 @@ int main (int argc, char * const argv[]) {
         parser.add_option("-h").action("help").help("alternative help");
         parser.add_option("-v").action("version").help("alternative version");
 
-        optparse::Values& options = parser.parse_args(argc, argv);
+        // optparse::Values& options =
+        parser.parse_args(argc, argv);
         vector<string> args = parser.args();
 
         if (argc == 0) {

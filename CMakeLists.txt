@@ -9,5 +9,6 @@ link_directories ("${PROJECT_SOURCE_DIR}/shared_content/lib/macosx")
 add_executable (lionheart main.cpp
     src/OptionParser.cpp
     src/LogSink.cpp
+    src/Log.cpp
 )
 

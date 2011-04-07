@@ -1,0 +1,450 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Callback	OptionParser.h	/^class Callback {$/;"	c	namespace:optparse
+ConsoleSink	LogSink.cpp	/^ConsoleSink::ConsoleSink(const std::string& name) :$/;"	f	class:ConsoleSink	signature:(const std::string& name)
+ConsoleSink	LogSink.h	/^    ConsoleSink(const std::string& name);$/;"	p	class:ConsoleSink	access:public	signature:(const std::string& name)
+ConsoleSink	LogSink.h	/^class ConsoleSink : public LogSink$/;"	c	inherits:LogSink
+ConsoleSink::ConsoleSink	LogSink.cpp	/^ConsoleSink::ConsoleSink(const std::string& name) :$/;"	f	class:ConsoleSink	signature:(const std::string& name)
+ConsoleSink::ConsoleSink	LogSink.h	/^    ConsoleSink(const std::string& name);$/;"	p	class:ConsoleSink	access:public	signature:(const std::string& name)
+ConsoleSink::writeMessage	LogSink.cpp	/^void ConsoleSink::writeMessage(LogLevel level, const std::string& msg)$/;"	f	class:ConsoleSink	signature:(LogLevel level, const std::string& msg)
+ConsoleSink::writeMessage	LogSink.h	/^    virtual void writeMessage(LogLevel level, const std::string& msg);$/;"	p	class:ConsoleSink	access:public	signature:(LogLevel level, const std::string& msg)
+ConsoleSink::~ConsoleSink	LogSink.cpp	/^ConsoleSink::~ConsoleSink()$/;"	f	class:ConsoleSink	signature:()
+ConsoleSink::~ConsoleSink	LogSink.h	/^    virtual ~ConsoleSink();$/;"	p	class:ConsoleSink	access:public	signature:()
+LOG_CRITICAL	LogSink.h	/^    LOG_CRITICAL$/;"	e	enum:LogLevel
+LOG_ERROR	LogSink.h	/^    LOG_ERROR,$/;"	e	enum:LogLevel
+LOG_NOTE	LogSink.h	/^    LOG_NOTE,$/;"	e	enum:LogLevel
+LOG_SINK_H	LogSink.h	/^#define LOG_SINK_H$/;"	d
+LOG_VERBOSE	LogSink.h	/^    LOG_VERBOSE,$/;"	e	enum:LogLevel
+LOG_WARNING	LogSink.h	/^    LOG_WARNING,$/;"	e	enum:LogLevel
+LogLevel	LogSink.h	/^enum LogLevel {$/;"	g
+LogSink	LogSink.cpp	/^LogSink::LogSink(const std::string& name) :$/;"	f	class:LogSink	signature:(const std::string& name)
+LogSink	LogSink.h	/^    LogSink(const LogSink&);$/;"	p	class:LogSink	access:private	signature:(const LogSink&)
+LogSink	LogSink.h	/^    LogSink(const std::string& name);$/;"	p	class:LogSink	access:public	signature:(const std::string& name)
+LogSink	LogSink.h	/^class LogSink$/;"	c
+LogSink::LogSink	LogSink.cpp	/^LogSink::LogSink(const std::string& name) :$/;"	f	class:LogSink	signature:(const std::string& name)
+LogSink::LogSink	LogSink.h	/^    LogSink(const LogSink&);$/;"	p	class:LogSink	access:private	signature:(const LogSink&)
+LogSink::LogSink	LogSink.h	/^    LogSink(const std::string& name);$/;"	p	class:LogSink	access:public	signature:(const std::string& name)
+LogSink::getName	LogSink.cpp	/^std::string LogSink::getName() const$/;"	f	class:LogSink	signature:() const
+LogSink::getName	LogSink.h	/^    std::string getName() const;$/;"	p	class:LogSink	access:public	signature:() const
+LogSink::m_Name	LogSink.h	/^    std::string m_Name;$/;"	m	class:LogSink	access:private
+LogSink::operator =	LogSink.h	/^    LogSink& operator=(const LogSink&);$/;"	p	class:LogSink	access:private	signature:(const LogSink&)
+LogSink::write	LogSink.h	/^    virtual void write(LogLevel level, const std::string& msg) = 0;$/;"	p	class:LogSink	access:public	signature:(LogLevel level, const std::string& msg)
+LogSink::~LogSink	LogSink.cpp	/^LogSink::~LogSink()$/;"	f	class:LogSink	signature:()
+LogSink::~LogSink	LogSink.h	/^    virtual ~LogSink();$/;"	p	class:LogSink	access:public	signature:()
+LogSinkPtr	LogSink.h	/^typedef shared_ptr<LogSink> LogSinkPtr;$/;"	t
+OPTIONPARSER_H_	OptionParser.h	/^#define OPTIONPARSER_H_$/;"	d
+Option	OptionParser.h	/^    Option() : _action("store"), _type("string"), _nargs(1), _callback(0) {}$/;"	f	class:optparse::Option	access:public	signature:()
+Option	OptionParser.h	/^class Option {$/;"	c	namespace:optparse
+OptionGroup	OptionParser.h	/^    OptionGroup(const OptionParser& p, const std::string& t, const std::string& d = "") :$/;"	f	class:optparse::OptionGroup	access:public	signature:(const OptionParser& p, const std::string& t, const std::string& d = Ó)
+OptionGroup	OptionParser.h	/^class OptionGroup : public OptionParser {$/;"	c	namespace:optparse	inherits:OptionParser
+OptionParser	OptionParser.cpp	/^OptionParser::OptionParser() :$/;"	f	class:optparse::OptionParser	signature:()
+OptionParser	OptionParser.h	/^    OptionParser();$/;"	p	class:optparse::OptionParser	access:public	signature:()
+OptionParser	OptionParser.h	/^class OptionParser {$/;"	c	namespace:optparse
+SUPPRESS_HELP	OptionParser.h	/^const char* const SUPPRESS_HELP = "SUPPRESS" "HELP";$/;"	m	namespace:optparse
+SUPPRESS_USAGE	OptionParser.h	/^const char* const SUPPRESS_USAGE = "SUPPRESS" "USAGE";$/;"	m	namespace:optparse
+Value	OptionParser.h	/^    Value() : str(), valid(false) {}$/;"	f	class:optparse::Value	access:public	signature:()
+Value	OptionParser.h	/^    Value(const std::string& v) : str(v), valid(true) {}$/;"	f	class:optparse::Value	access:public	signature:(const std::string& v)
+Value	OptionParser.h	/^class Value {$/;"	c	namespace:optparse
+Values	OptionParser.h	/^    Values() : _map() {}$/;"	f	class:optparse::Values	access:public	signature:()
+Values	OptionParser.h	/^class Values {$/;"	c	namespace:optparse
+_	OptionParser.cpp	/^# define _(/;"	d	file:
+_action	OptionParser.h	/^    std::string _action;$/;"	m	class:optparse::Option	access:private
+_add_help_option	OptionParser.h	/^    bool _add_help_option;$/;"	m	class:optparse::OptionParser	access:private
+_add_version_option	OptionParser.h	/^    bool _add_version_option;$/;"	m	class:optparse::OptionParser	access:private
+_appendMap	OptionParser.h	/^    lstMap _appendMap;$/;"	m	class:optparse::Values	access:private
+_callback	OptionParser.h	/^    Callback* _callback;$/;"	m	class:optparse::Option	access:private
+_choices	OptionParser.h	/^    std::list<std::string> _choices;$/;"	m	class:optparse::Option	access:private
+_const	OptionParser.h	/^    std::string _const;$/;"	m	class:optparse::Option	access:private
+_default	OptionParser.h	/^    std::string _default;$/;"	m	class:optparse::Option	access:private
+_defaults	OptionParser.h	/^    strMap _defaults;$/;"	m	class:optparse::OptionParser	access:private
+_description	OptionParser.h	/^    std::string _description;$/;"	m	class:optparse::OptionParser	access:private
+_dest	OptionParser.h	/^    std::string _dest;$/;"	m	class:optparse::Option	access:private
+_epilog	OptionParser.h	/^    std::string _epilog;$/;"	m	class:optparse::OptionParser	access:private
+_group_description	OptionParser.h	/^    std::string _group_description;$/;"	m	class:optparse::OptionGroup	access:private
+_groups	OptionParser.h	/^    std::list<OptionGroup const*> _groups;$/;"	m	class:optparse::OptionParser	access:private
+_help	OptionParser.h	/^    std::string _help;$/;"	m	class:optparse::Option	access:private
+_interspersed_args	OptionParser.h	/^    bool _interspersed_args;$/;"	m	class:optparse::OptionParser	access:private
+_leftover	OptionParser.h	/^    std::list<std::string> _leftover;$/;"	m	class:optparse::OptionParser	access:private
+_long_opts	OptionParser.h	/^    std::set<std::string> _long_opts;$/;"	m	class:optparse::Option	access:private
+_map	OptionParser.h	/^    strMap _map;$/;"	m	class:optparse::Values	access:private
+_metavar	OptionParser.h	/^    std::string _metavar;$/;"	m	class:optparse::Option	access:private
+_nargs	OptionParser.h	/^    size_t _nargs;$/;"	m	class:optparse::Option	access:private
+_optmap_l	OptionParser.h	/^    optMap _optmap_l;$/;"	m	class:optparse::OptionParser	access:private
+_optmap_s	OptionParser.h	/^    optMap _optmap_s;$/;"	m	class:optparse::OptionParser	access:private
+_opts	OptionParser.h	/^    std::list<Option> _opts;$/;"	m	class:optparse::OptionParser	access:private
+_parser	OptionParser.h	/^    const OptionParser& _parser;$/;"	m	class:optparse::OptionGroup	access:private
+_prog	OptionParser.h	/^    std::string _prog;$/;"	m	class:optparse::OptionParser	access:private
+_remaining	OptionParser.h	/^    std::list<std::string> _remaining;$/;"	m	class:optparse::OptionParser	access:private
+_short_opts	OptionParser.h	/^    std::set<std::string> _short_opts;$/;"	m	class:optparse::Option	access:private
+_title	OptionParser.h	/^    std::string _title;$/;"	m	class:optparse::OptionGroup	access:private
+_type	OptionParser.h	/^    std::string _type;$/;"	m	class:optparse::Option	access:private
+_usage	OptionParser.h	/^    std::string _usage;$/;"	m	class:optparse::OptionParser	access:private
+_userSet	OptionParser.h	/^    std::set<std::string> _userSet;$/;"	m	class:optparse::Values	access:private
+_values	OptionParser.h	/^    Values _values;$/;"	m	class:optparse::OptionParser	access:private
+_version	OptionParser.h	/^    std::string _version;$/;"	m	class:optparse::OptionParser	access:private
+action	OptionParser.cpp	/^Option& Option::action(const string& a) {$/;"	f	class:optparse::Option	signature:(const string& a)
+action	OptionParser.h	/^    Option& action(const std::string& a);$/;"	p	class:optparse::Option	access:public	signature:(const std::string& a)
+action	OptionParser.h	/^    const std::string& action() const { return _action; }$/;"	f	class:optparse::Option	access:public	signature:() const
+add_help_option	OptionParser.h	/^    OptionParser& add_help_option(bool h) { _add_help_option = h; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool h)
+add_help_option	OptionParser.h	/^    bool add_help_option() const { return _add_help_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const string& opt) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt)
+add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2)
+add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2, const string& opt3) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2, const string& opt3)
+add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+add_option	OptionParser.h	/^    Option& add_option(const std::string& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt)
+add_option	OptionParser.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2)
+add_option	OptionParser.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2, const std::string& opt3);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2, const std::string& opt3)
+add_option	OptionParser.h	/^    Option& add_option(const std::vector<std::string>& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& opt)
+add_option_group	OptionParser.cpp	/^OptionParser& OptionParser::add_option_group(const OptionGroup& group) {$/;"	f	class:optparse::OptionParser	signature:(const OptionGroup& group)
+add_option_group	OptionParser.h	/^    OptionParser& add_option_group(const OptionGroup& group);$/;"	p	class:optparse::OptionParser	access:public	signature:(const OptionGroup& group)
+add_version_option	OptionParser.h	/^    OptionParser& add_version_option(bool v) { _add_version_option = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool v)
+add_version_option	OptionParser.h	/^    bool add_version_option() const { return _add_version_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+all	OptionParser.h	/^    const std::list<std::string>& all(const std::string& d) const { return _appendMap.find(d)->second; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+all	OptionParser.h	/^    std::list<std::string>& all(const std::string& d) { return _appendMap[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+args	OptionParser.h	/^    const std::list<std::string>& args() const { return _leftover; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+args	OptionParser.h	/^    std::vector<std::string> args() {$/;"	f	class:optparse::OptionParser	access:public	signature:()
+basename	OptionParser.cpp	/^static string basename(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+callback	OptionParser.h	/^    Callback* callback() const { return _callback; }$/;"	f	class:optparse::Option	access:public	signature:() const
+callback	OptionParser.h	/^    Option& callback(Callback& c) { _callback = &c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(Callback& c)
+check_type	OptionParser.cpp	/^string Option::check_type(const string& opt, const string& val) const {$/;"	f	class:optparse::Option	signature:(const string& opt, const string& val) const
+check_type	OptionParser.h	/^    std::string check_type(const std::string& opt, const std::string& val) const;$/;"	p	class:optparse::Option	access:private	signature:(const std::string& opt, const std::string& val) const
+choices	OptionParser.h	/^    Option& choices(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::Option	access:public	signature:(InputIterator begin, InputIterator end)
+choices	OptionParser.h	/^    const std::list<std::string>& choices() const { return _choices; }$/;"	f	class:optparse::Option	access:public	signature:() const
+cols	OptionParser.cpp	/^static unsigned int cols() {$/;"	f	namespace:optparse	signature:()
+const_iterator	OptionParser.h	/^    typedef std::list<std::string>::const_iterator const_iterator;$/;"	t	class:optparse::Values	access:public
+description	OptionParser.h	/^    OptionParser& description(const std::string& d) { _description = d; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& d)
+description	OptionParser.h	/^    const std::string& description() const { return _description; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+dest	OptionParser.h	/^    Option& dest(const std::string& d) { _dest = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+dest	OptionParser.h	/^    const std::string& dest() const { return _dest; }$/;"	f	class:optparse::Option	access:public	signature:() const
+disable_interspersed_args	OptionParser.h	/^    OptionParser& disable_interspersed_args() { _interspersed_args = false; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+enable_interspersed_args	OptionParser.h	/^    OptionParser& enable_interspersed_args() { _interspersed_args = true; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+epilog	OptionParser.h	/^    OptionParser& epilog(const std::string& e) { _epilog = e; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& e)
+epilog	OptionParser.h	/^    const std::string& epilog() const { return _epilog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+error	OptionParser.cpp	/^void OptionParser::error(const string& msg) const {$/;"	f	class:optparse::OptionParser	signature:(const string& msg) const
+error	OptionParser.h	/^    void error(const std::string& msg) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& msg) const
+exit	OptionParser.cpp	/^void OptionParser::exit() const {$/;"	f	class:optparse::OptionParser	signature:() const
+exit	OptionParser.h	/^    void exit() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+format_help	OptionParser.cpp	/^string Option::format_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+format_help	OptionParser.cpp	/^string OptionParser::format_help() const {$/;"	f	class:optparse::OptionParser	signature:() const
+format_help	OptionParser.h	/^    std::string format_help() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+format_help	OptionParser.h	/^    std::string format_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+format_option_help	OptionParser.cpp	/^string Option::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+format_option_help	OptionParser.cpp	/^string OptionParser::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::OptionParser	signature:(unsigned int indent ) const
+format_option_help	OptionParser.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+format_option_help	OptionParser.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(unsigned int indent = 2) const
+format_usage	OptionParser.cpp	/^string OptionParser::format_usage(const string& u) const {$/;"	f	class:optparse::OptionParser	signature:(const string& u) const
+format_usage	OptionParser.h	/^    std::string format_usage(const std::string& u) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& u) const
+get	OptionParser.h	/^    Value get(const std::string& d) const { return (is_set(d)) ? Value((*this)[d]) : Value(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+getName	LogSink.cpp	/^std::string LogSink::getName() const$/;"	f	class:LogSink	signature:() const
+getName	LogSink.h	/^    std::string getName() const;$/;"	p	class:LogSink	access:public	signature:() const
+get_const	OptionParser.h	/^    const std::string& get_const() const { return _const; }$/;"	f	class:optparse::Option	access:public	signature:() const
+get_default	OptionParser.h	/^    const std::string& get_default() const { return _default; }$/;"	f	class:optparse::Option	access:public	signature:() const
+get_usage	OptionParser.cpp	/^string OptionParser::get_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+get_usage	OptionParser.h	/^    std::string get_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+get_version	OptionParser.cpp	/^string OptionParser::get_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+get_version	OptionParser.h	/^    std::string get_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+group_description	OptionParser.h	/^    OptionGroup& group_description(const std::string& d) { _group_description = d; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& d)
+group_description	OptionParser.h	/^    const std::string& group_description() const { return _group_description; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+handle_long_opt	OptionParser.cpp	/^void OptionParser::handle_long_opt(const string& optstr) {$/;"	f	class:optparse::OptionParser	signature:(const string& optstr)
+handle_long_opt	OptionParser.h	/^    void handle_long_opt(const std::string& optstr);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& optstr)
+handle_short_opt	OptionParser.cpp	/^void OptionParser::handle_short_opt(const string& opt, const string& arg) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt, const string& arg)
+handle_short_opt	OptionParser.h	/^    void handle_short_opt(const std::string& opt, const std::string& arg);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt, const std::string& arg)
+help	OptionParser.h	/^    Option& help(const std::string& h) { _help = h; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& h)
+help	OptionParser.h	/^    const std::string& help() const { return _help; }$/;"	f	class:optparse::Option	access:public	signature:() const
+interspersed_args	OptionParser.h	/^    bool interspersed_args() const { return _interspersed_args; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+is_set	OptionParser.h	/^    bool is_set(const std::string& d) const { return _map.find(d) != _map.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+is_set_by_user	OptionParser.cpp	/^void Values::is_set_by_user(const string& d, bool yes) {$/;"	f	class:optparse::Values	signature:(const string& d, bool yes)
+is_set_by_user	OptionParser.h	/^    bool is_set_by_user(const std::string& d) const { return _userSet.find(d) != _userSet.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+is_set_by_user	OptionParser.h	/^    void is_set_by_user(const std::string& d, bool yes);$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d, bool yes)
+iterator	OptionParser.h	/^    typedef std::list<std::string>::iterator iterator;$/;"	t	class:optparse::Values	access:public
+lookup_long_opt	OptionParser.cpp	/^const Option& OptionParser::lookup_long_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+lookup_long_opt	OptionParser.h	/^    const Option& lookup_long_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+lookup_short_opt	OptionParser.cpp	/^const Option& OptionParser::lookup_short_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+lookup_short_opt	OptionParser.h	/^    const Option& lookup_short_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+lstMap	OptionParser.h	/^typedef std::map<std::string,std::list<std::string> > lstMap;$/;"	t	namespace:optparse
+lwrap	OptionParser.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+m_Name	LogSink.h	/^    std::string m_Name;$/;"	m	class:LogSink	access:private
+metavar	OptionParser.h	/^    Option& metavar(const std::string& m) { _metavar = m; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& m)
+metavar	OptionParser.h	/^    const std::string& metavar() const { return _metavar; }$/;"	f	class:optparse::Option	access:public	signature:() const
+nargs	OptionParser.h	/^    Option& nargs(size_t n) { _nargs = n; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(size_t n)
+nargs	OptionParser.h	/^    size_t nargs() const { return _nargs; }$/;"	f	class:optparse::Option	access:public	signature:() const
+operator ()	OptionParser.cpp	/^  string operator() (const string& s) { return lwrap + s + rwrap; }$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& s)
+operator ()	OptionParser.h	/^  virtual void operator() (const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser) = 0;$/;"	p	class:optparse::Callback	access:public	signature:(const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser)
+operator =	LogSink.h	/^    LogSink& operator=(const LogSink&);$/;"	p	class:LogSink	access:private	signature:(const LogSink&)
+operator []	OptionParser.cpp	/^const string& Values::operator[] (const string& d) const {$/;"	f	class:optparse::Values	signature:(const string& d) const
+operator []	OptionParser.h	/^    const std::string& operator[] (const std::string& d) const;$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d) const
+operator []	OptionParser.h	/^    std::string& operator[] (const std::string& d) { return _map[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+operator bool	OptionParser.h	/^    operator bool() { bool t; return (valid && (std::istringstream(str) >> t)) ? t : false; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator const char*	OptionParser.h	/^    operator const char*() { return str.c_str(); }$/;"	f	class:optparse::Value	access:public	signature:()
+operator double	OptionParser.h	/^    operator double() { double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator float	OptionParser.h	/^    operator float() { float t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator int	OptionParser.h	/^    operator int() { int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator long	OptionParser.h	/^    operator long() { long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator long double	OptionParser.h	/^    operator long double() { long double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator short	OptionParser.h	/^    operator short() { short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator unsigned int	OptionParser.h	/^    operator unsigned int() { unsigned int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator unsigned long	OptionParser.h	/^    operator unsigned long() { unsigned long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator unsigned short	OptionParser.h	/^    operator unsigned short() { unsigned short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optMap	OptionParser.h	/^typedef std::map<std::string,Option const*> optMap;$/;"	t	namespace:optparse
+optparse	OptionParser.cpp	/^namespace optparse {$/;"	n	file:
+optparse	OptionParser.h	/^namespace optparse {$/;"	n
+optparse::Callback	OptionParser.h	/^class Callback {$/;"	c	namespace:optparse
+optparse::Callback::operator ()	OptionParser.h	/^  virtual void operator() (const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser) = 0;$/;"	p	class:optparse::Callback	access:public	signature:(const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser)
+optparse::Callback::~Callback	OptionParser.h	/^  virtual ~Callback() {}$/;"	f	class:optparse::Callback	access:public	signature:()
+optparse::Option	OptionParser.h	/^class Option {$/;"	c	namespace:optparse
+optparse::Option::Option	OptionParser.h	/^    Option() : _action("store"), _type("string"), _nargs(1), _callback(0) {}$/;"	f	class:optparse::Option	access:public	signature:()
+optparse::Option::_action	OptionParser.h	/^    std::string _action;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_callback	OptionParser.h	/^    Callback* _callback;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_choices	OptionParser.h	/^    std::list<std::string> _choices;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_const	OptionParser.h	/^    std::string _const;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_default	OptionParser.h	/^    std::string _default;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_dest	OptionParser.h	/^    std::string _dest;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_help	OptionParser.h	/^    std::string _help;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_long_opts	OptionParser.h	/^    std::set<std::string> _long_opts;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_metavar	OptionParser.h	/^    std::string _metavar;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_nargs	OptionParser.h	/^    size_t _nargs;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_short_opts	OptionParser.h	/^    std::set<std::string> _short_opts;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_type	OptionParser.h	/^    std::string _type;$/;"	m	class:optparse::Option	access:private
+optparse::Option::action	OptionParser.cpp	/^Option& Option::action(const string& a) {$/;"	f	class:optparse::Option	signature:(const string& a)
+optparse::Option::action	OptionParser.h	/^    Option& action(const std::string& a);$/;"	p	class:optparse::Option	access:public	signature:(const std::string& a)
+optparse::Option::action	OptionParser.h	/^    const std::string& action() const { return _action; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::callback	OptionParser.h	/^    Callback* callback() const { return _callback; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::callback	OptionParser.h	/^    Option& callback(Callback& c) { _callback = &c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(Callback& c)
+optparse::Option::check_type	OptionParser.cpp	/^string Option::check_type(const string& opt, const string& val) const {$/;"	f	class:optparse::Option	signature:(const string& opt, const string& val) const
+optparse::Option::check_type	OptionParser.h	/^    std::string check_type(const std::string& opt, const std::string& val) const;$/;"	p	class:optparse::Option	access:private	signature:(const std::string& opt, const std::string& val) const
+optparse::Option::choices	OptionParser.h	/^    Option& choices(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::Option	access:public	signature:(InputIterator begin, InputIterator end)
+optparse::Option::choices	OptionParser.h	/^    const std::list<std::string>& choices() const { return _choices; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::dest	OptionParser.h	/^    Option& dest(const std::string& d) { _dest = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+optparse::Option::dest	OptionParser.h	/^    const std::string& dest() const { return _dest; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::format_help	OptionParser.cpp	/^string Option::format_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+optparse::Option::format_help	OptionParser.h	/^    std::string format_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+optparse::Option::format_option_help	OptionParser.cpp	/^string Option::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+optparse::Option::format_option_help	OptionParser.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+optparse::Option::get_const	OptionParser.h	/^    const std::string& get_const() const { return _const; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::get_default	OptionParser.h	/^    const std::string& get_default() const { return _default; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::help	OptionParser.h	/^    Option& help(const std::string& h) { _help = h; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& h)
+optparse::Option::help	OptionParser.h	/^    const std::string& help() const { return _help; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::metavar	OptionParser.h	/^    Option& metavar(const std::string& m) { _metavar = m; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& m)
+optparse::Option::metavar	OptionParser.h	/^    const std::string& metavar() const { return _metavar; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::nargs	OptionParser.h	/^    Option& nargs(size_t n) { _nargs = n; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(size_t n)
+optparse::Option::nargs	OptionParser.h	/^    size_t nargs() const { return _nargs; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::set_const	OptionParser.h	/^    Option& set_const(const std::string& c) { _const = c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& c)
+optparse::Option::set_default	OptionParser.h	/^    Option& set_default(T t) { std::ostringstream ss; ss << t; _default = ss.str(); return *this; }$/;"	f	class:optparse::Option	access:public	signature:(T t)
+optparse::Option::set_default	OptionParser.h	/^    Option& set_default(const std::string& d) { _default = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+optparse::Option::type	OptionParser.h	/^    Option& type(const std::string& t) { _type = t; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& t)
+optparse::Option::type	OptionParser.h	/^    const std::string& type() const { return _type; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::~Option	OptionParser.h	/^    virtual ~Option() {}$/;"	f	class:optparse::Option	access:public	signature:()
+optparse::OptionGroup	OptionParser.h	/^class OptionGroup : public OptionParser {$/;"	c	namespace:optparse	inherits:OptionParser
+optparse::OptionGroup::OptionGroup	OptionParser.h	/^    OptionGroup(const OptionParser& p, const std::string& t, const std::string& d = "") :$/;"	f	class:optparse::OptionGroup	access:public	signature:(const OptionParser& p, const std::string& t, const std::string& d = Ó)
+optparse::OptionGroup::_group_description	OptionParser.h	/^    std::string _group_description;$/;"	m	class:optparse::OptionGroup	access:private
+optparse::OptionGroup::_parser	OptionParser.h	/^    const OptionParser& _parser;$/;"	m	class:optparse::OptionGroup	access:private
+optparse::OptionGroup::_title	OptionParser.h	/^    std::string _title;$/;"	m	class:optparse::OptionGroup	access:private
+optparse::OptionGroup::group_description	OptionParser.h	/^    OptionGroup& group_description(const std::string& d) { _group_description = d; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& d)
+optparse::OptionGroup::group_description	OptionParser.h	/^    const std::string& group_description() const { return _group_description; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+optparse::OptionGroup::title	OptionParser.h	/^    OptionGroup& title(const std::string& t) { _title = t; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& t)
+optparse::OptionGroup::title	OptionParser.h	/^    const std::string& title() const { return _title; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+optparse::OptionGroup::~OptionGroup	OptionParser.h	/^    virtual ~OptionGroup() {}$/;"	f	class:optparse::OptionGroup	access:public	signature:()
+optparse::OptionParser	OptionParser.h	/^class OptionParser {$/;"	c	namespace:optparse
+optparse::OptionParser::OptionParser	OptionParser.cpp	/^OptionParser::OptionParser() :$/;"	f	class:optparse::OptionParser	signature:()
+optparse::OptionParser::OptionParser	OptionParser.h	/^    OptionParser();$/;"	p	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::_add_help_option	OptionParser.h	/^    bool _add_help_option;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_add_version_option	OptionParser.h	/^    bool _add_version_option;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_defaults	OptionParser.h	/^    strMap _defaults;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_description	OptionParser.h	/^    std::string _description;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_epilog	OptionParser.h	/^    std::string _epilog;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_groups	OptionParser.h	/^    std::list<OptionGroup const*> _groups;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_interspersed_args	OptionParser.h	/^    bool _interspersed_args;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_leftover	OptionParser.h	/^    std::list<std::string> _leftover;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_optmap_l	OptionParser.h	/^    optMap _optmap_l;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_optmap_s	OptionParser.h	/^    optMap _optmap_s;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_opts	OptionParser.h	/^    std::list<Option> _opts;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_prog	OptionParser.h	/^    std::string _prog;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_remaining	OptionParser.h	/^    std::list<std::string> _remaining;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_usage	OptionParser.h	/^    std::string _usage;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_values	OptionParser.h	/^    Values _values;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_version	OptionParser.h	/^    std::string _version;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::add_help_option	OptionParser.h	/^    OptionParser& add_help_option(bool h) { _add_help_option = h; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool h)
+optparse::OptionParser::add_help_option	OptionParser.h	/^    bool add_help_option() const { return _add_help_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const string& opt) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt)
+optparse::OptionParser::add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2)
+optparse::OptionParser::add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2, const string& opt3) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2, const string& opt3)
+optparse::OptionParser::add_option	OptionParser.cpp	/^Option& OptionParser::add_option(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+optparse::OptionParser::add_option	OptionParser.h	/^    Option& add_option(const std::string& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt)
+optparse::OptionParser::add_option	OptionParser.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2)
+optparse::OptionParser::add_option	OptionParser.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2, const std::string& opt3);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2, const std::string& opt3)
+optparse::OptionParser::add_option	OptionParser.h	/^    Option& add_option(const std::vector<std::string>& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& opt)
+optparse::OptionParser::add_option_group	OptionParser.cpp	/^OptionParser& OptionParser::add_option_group(const OptionGroup& group) {$/;"	f	class:optparse::OptionParser	signature:(const OptionGroup& group)
+optparse::OptionParser::add_option_group	OptionParser.h	/^    OptionParser& add_option_group(const OptionGroup& group);$/;"	p	class:optparse::OptionParser	access:public	signature:(const OptionGroup& group)
+optparse::OptionParser::add_version_option	OptionParser.h	/^    OptionParser& add_version_option(bool v) { _add_version_option = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool v)
+optparse::OptionParser::add_version_option	OptionParser.h	/^    bool add_version_option() const { return _add_version_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::args	OptionParser.h	/^    const std::list<std::string>& args() const { return _leftover; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::args	OptionParser.h	/^    std::vector<std::string> args() {$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::description	OptionParser.h	/^    OptionParser& description(const std::string& d) { _description = d; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& d)
+optparse::OptionParser::description	OptionParser.h	/^    const std::string& description() const { return _description; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::disable_interspersed_args	OptionParser.h	/^    OptionParser& disable_interspersed_args() { _interspersed_args = false; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::enable_interspersed_args	OptionParser.h	/^    OptionParser& enable_interspersed_args() { _interspersed_args = true; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::epilog	OptionParser.h	/^    OptionParser& epilog(const std::string& e) { _epilog = e; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& e)
+optparse::OptionParser::epilog	OptionParser.h	/^    const std::string& epilog() const { return _epilog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::error	OptionParser.cpp	/^void OptionParser::error(const string& msg) const {$/;"	f	class:optparse::OptionParser	signature:(const string& msg) const
+optparse::OptionParser::error	OptionParser.h	/^    void error(const std::string& msg) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& msg) const
+optparse::OptionParser::exit	OptionParser.cpp	/^void OptionParser::exit() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::exit	OptionParser.h	/^    void exit() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::format_help	OptionParser.cpp	/^string OptionParser::format_help() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::format_help	OptionParser.h	/^    std::string format_help() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::format_option_help	OptionParser.cpp	/^string OptionParser::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::OptionParser	signature:(unsigned int indent ) const
+optparse::OptionParser::format_option_help	OptionParser.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(unsigned int indent = 2) const
+optparse::OptionParser::format_usage	OptionParser.cpp	/^string OptionParser::format_usage(const string& u) const {$/;"	f	class:optparse::OptionParser	signature:(const string& u) const
+optparse::OptionParser::format_usage	OptionParser.h	/^    std::string format_usage(const std::string& u) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& u) const
+optparse::OptionParser::get_usage	OptionParser.cpp	/^string OptionParser::get_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::get_usage	OptionParser.h	/^    std::string get_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::get_version	OptionParser.cpp	/^string OptionParser::get_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::get_version	OptionParser.h	/^    std::string get_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::handle_long_opt	OptionParser.cpp	/^void OptionParser::handle_long_opt(const string& optstr) {$/;"	f	class:optparse::OptionParser	signature:(const string& optstr)
+optparse::OptionParser::handle_long_opt	OptionParser.h	/^    void handle_long_opt(const std::string& optstr);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& optstr)
+optparse::OptionParser::handle_short_opt	OptionParser.cpp	/^void OptionParser::handle_short_opt(const string& opt, const string& arg) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt, const string& arg)
+optparse::OptionParser::handle_short_opt	OptionParser.h	/^    void handle_short_opt(const std::string& opt, const std::string& arg);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt, const std::string& arg)
+optparse::OptionParser::interspersed_args	OptionParser.h	/^    bool interspersed_args() const { return _interspersed_args; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::lookup_long_opt	OptionParser.cpp	/^const Option& OptionParser::lookup_long_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+optparse::OptionParser::lookup_long_opt	OptionParser.h	/^    const Option& lookup_long_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+optparse::OptionParser::lookup_short_opt	OptionParser.cpp	/^const Option& OptionParser::lookup_short_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+optparse::OptionParser::lookup_short_opt	OptionParser.h	/^    const Option& lookup_short_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+optparse::OptionParser::parse_args	OptionParser.cpp	/^Values& OptionParser::parse_args(const int argc, char const* const* const argv) {$/;"	f	class:optparse::OptionParser	signature:(const int argc, char const* const* const argv)
+optparse::OptionParser::parse_args	OptionParser.cpp	/^Values& OptionParser::parse_args(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+optparse::OptionParser::parse_args	OptionParser.h	/^    Values& parse_args(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::OptionParser	access:public	signature:(InputIterator begin, InputIterator end)
+optparse::OptionParser::parse_args	OptionParser.h	/^    Values& parse_args(const std::vector<std::string>& args);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& args)
+optparse::OptionParser::parse_args	OptionParser.h	/^    Values& parse_args(int argc, char const* const* argv);$/;"	p	class:optparse::OptionParser	access:public	signature:(int argc, char const* const* argv)
+optparse::OptionParser::print_help	OptionParser.cpp	/^void OptionParser::print_help() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::print_help	OptionParser.h	/^    void print_help() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::print_usage	OptionParser.cpp	/^void OptionParser::print_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::print_usage	OptionParser.cpp	/^void OptionParser::print_usage(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+optparse::OptionParser::print_usage	OptionParser.h	/^    void print_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::print_usage	OptionParser.h	/^    void print_usage(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+optparse::OptionParser::print_version	OptionParser.cpp	/^void OptionParser::print_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::print_version	OptionParser.cpp	/^void OptionParser::print_version(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+optparse::OptionParser::print_version	OptionParser.h	/^    void print_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::print_version	OptionParser.h	/^    void print_version(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+optparse::OptionParser::process_opt	OptionParser.cpp	/^void OptionParser::process_opt(const Option& o, const string& opt, const string& value) {$/;"	f	class:optparse::OptionParser	signature:(const Option& o, const string& opt, const string& value)
+optparse::OptionParser::process_opt	OptionParser.h	/^    void process_opt(const Option& option, const std::string& opt, const std::string& value);$/;"	p	class:optparse::OptionParser	access:private	signature:(const Option& option, const std::string& opt, const std::string& value)
+optparse::OptionParser::prog	OptionParser.h	/^    OptionParser& prog(const std::string& p) { _prog = p; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& p)
+optparse::OptionParser::prog	OptionParser.h	/^    const std::string& prog() const { return _prog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::set_defaults	OptionParser.h	/^    OptionParser& set_defaults(const std::string& dest, const std::string& val) {$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& dest, const std::string& val)
+optparse::OptionParser::set_usage	OptionParser.cpp	/^void OptionParser::set_usage(const string& u) {$/;"	f	class:optparse::OptionParser	signature:(const string& u)
+optparse::OptionParser::set_usage	OptionParser.h	/^    void set_usage(const std::string& u);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+optparse::OptionParser::usage	OptionParser.h	/^    OptionParser& usage(const std::string& u) { set_usage(u); return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+optparse::OptionParser::usage	OptionParser.h	/^    const std::string& usage() const { return _usage; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::version	OptionParser.h	/^    OptionParser& version(const std::string& v) { _version = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& v)
+optparse::OptionParser::version	OptionParser.h	/^    const std::string& version() const { return _version; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::~OptionParser	OptionParser.h	/^    virtual ~OptionParser() {}$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::SUPPRESS_HELP	OptionParser.h	/^const char* const SUPPRESS_HELP = "SUPPRESS" "HELP";$/;"	m	namespace:optparse
+optparse::SUPPRESS_USAGE	OptionParser.h	/^const char* const SUPPRESS_USAGE = "SUPPRESS" "USAGE";$/;"	m	namespace:optparse
+optparse::Value	OptionParser.h	/^class Value {$/;"	c	namespace:optparse
+optparse::Value::Value	OptionParser.h	/^    Value() : str(), valid(false) {}$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::Value	OptionParser.h	/^    Value(const std::string& v) : str(v), valid(true) {}$/;"	f	class:optparse::Value	access:public	signature:(const std::string& v)
+optparse::Value::operator bool	OptionParser.h	/^    operator bool() { bool t; return (valid && (std::istringstream(str) >> t)) ? t : false; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator const char*	OptionParser.h	/^    operator const char*() { return str.c_str(); }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator double	OptionParser.h	/^    operator double() { double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator float	OptionParser.h	/^    operator float() { float t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator int	OptionParser.h	/^    operator int() { int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator long	OptionParser.h	/^    operator long() { long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator long double	OptionParser.h	/^    operator long double() { long double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator short	OptionParser.h	/^    operator short() { short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator unsigned int	OptionParser.h	/^    operator unsigned int() { unsigned int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator unsigned long	OptionParser.h	/^    operator unsigned long() { unsigned long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator unsigned short	OptionParser.h	/^    operator unsigned short() { unsigned short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::str	OptionParser.h	/^    const std::string str;$/;"	m	class:optparse::Value	access:private
+optparse::Value::valid	OptionParser.h	/^    bool valid;$/;"	m	class:optparse::Value	access:private
+optparse::Values	OptionParser.h	/^class Values {$/;"	c	namespace:optparse
+optparse::Values::Values	OptionParser.h	/^    Values() : _map() {}$/;"	f	class:optparse::Values	access:public	signature:()
+optparse::Values::_appendMap	OptionParser.h	/^    lstMap _appendMap;$/;"	m	class:optparse::Values	access:private
+optparse::Values::_map	OptionParser.h	/^    strMap _map;$/;"	m	class:optparse::Values	access:private
+optparse::Values::_userSet	OptionParser.h	/^    std::set<std::string> _userSet;$/;"	m	class:optparse::Values	access:private
+optparse::Values::all	OptionParser.h	/^    const std::list<std::string>& all(const std::string& d) const { return _appendMap.find(d)->second; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::all	OptionParser.h	/^    std::list<std::string>& all(const std::string& d) { return _appendMap[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+optparse::Values::const_iterator	OptionParser.h	/^    typedef std::list<std::string>::const_iterator const_iterator;$/;"	t	class:optparse::Values	access:public
+optparse::Values::get	OptionParser.h	/^    Value get(const std::string& d) const { return (is_set(d)) ? Value((*this)[d]) : Value(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::is_set	OptionParser.h	/^    bool is_set(const std::string& d) const { return _map.find(d) != _map.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::is_set_by_user	OptionParser.cpp	/^void Values::is_set_by_user(const string& d, bool yes) {$/;"	f	class:optparse::Values	signature:(const string& d, bool yes)
+optparse::Values::is_set_by_user	OptionParser.h	/^    bool is_set_by_user(const std::string& d) const { return _userSet.find(d) != _userSet.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::is_set_by_user	OptionParser.h	/^    void is_set_by_user(const std::string& d, bool yes);$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d, bool yes)
+optparse::Values::iterator	OptionParser.h	/^    typedef std::list<std::string>::iterator iterator;$/;"	t	class:optparse::Values	access:public
+optparse::Values::operator []	OptionParser.cpp	/^const string& Values::operator[] (const string& d) const {$/;"	f	class:optparse::Values	signature:(const string& d) const
+optparse::Values::operator []	OptionParser.h	/^    const std::string& operator[] (const std::string& d) const;$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::operator []	OptionParser.h	/^    std::string& operator[] (const std::string& d) { return _map[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+optparse::basename	OptionParser.cpp	/^static string basename(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+optparse::cols	OptionParser.cpp	/^static unsigned int cols() {$/;"	f	namespace:optparse	signature:()
+optparse::lstMap	OptionParser.h	/^typedef std::map<std::string,std::list<std::string> > lstMap;$/;"	t	namespace:optparse
+optparse::optMap	OptionParser.h	/^typedef std::map<std::string,Option const*> optMap;$/;"	t	namespace:optparse
+optparse::strMap	OptionParser.h	/^typedef std::map<std::string,std::string> strMap;$/;"	t	namespace:optparse
+optparse::str_format	OptionParser.cpp	/^static string str_format(const string& s, size_t pre, size_t len, bool indent_first = true) {$/;"	f	namespace:optparse	signature:(const string& s, size_t pre, size_t len, bool indent_first = true)
+optparse::str_inc	OptionParser.cpp	/^static string str_inc(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+optparse::str_join	OptionParser.cpp	/^static string str_join(const string& sep, InputIterator begin, InputIterator end) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end)
+optparse::str_join_trans	OptionParser.cpp	/^static string str_join_trans(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op)
+optparse::str_replace	OptionParser.cpp	/^static string str_replace(const string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(const string& s, const string& patt, const string& repl)
+optparse::str_replace	OptionParser.cpp	/^static string& str_replace(string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(string& s, const string& patt, const string& repl)
+optparse::str_wrap	OptionParser.cpp	/^class str_wrap {$/;"	c	namespace:optparse	file:
+optparse::str_wrap::lwrap	OptionParser.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+optparse::str_wrap::operator ()	OptionParser.cpp	/^  string operator() (const string& s) { return lwrap + s + rwrap; }$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& s)
+optparse::str_wrap::rwrap	OptionParser.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+optparse::str_wrap::str_wrap	OptionParser.cpp	/^  str_wrap(const string& l, const string& r) : lwrap(l), rwrap(r) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& l, const string& r)
+optparse::str_wrap::str_wrap	OptionParser.cpp	/^  str_wrap(const string& w) : lwrap(w), rwrap(w) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& w)
+parse_args	OptionParser.cpp	/^Values& OptionParser::parse_args(const int argc, char const* const* const argv) {$/;"	f	class:optparse::OptionParser	signature:(const int argc, char const* const* const argv)
+parse_args	OptionParser.cpp	/^Values& OptionParser::parse_args(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+parse_args	OptionParser.h	/^    Values& parse_args(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::OptionParser	access:public	signature:(InputIterator begin, InputIterator end)
+parse_args	OptionParser.h	/^    Values& parse_args(const std::vector<std::string>& args);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& args)
+parse_args	OptionParser.h	/^    Values& parse_args(int argc, char const* const* argv);$/;"	p	class:optparse::OptionParser	access:public	signature:(int argc, char const* const* argv)
+print_help	OptionParser.cpp	/^void OptionParser::print_help() const {$/;"	f	class:optparse::OptionParser	signature:() const
+print_help	OptionParser.h	/^    void print_help() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+print_usage	OptionParser.cpp	/^void OptionParser::print_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+print_usage	OptionParser.cpp	/^void OptionParser::print_usage(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+print_usage	OptionParser.h	/^    void print_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+print_usage	OptionParser.h	/^    void print_usage(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+print_version	OptionParser.cpp	/^void OptionParser::print_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+print_version	OptionParser.cpp	/^void OptionParser::print_version(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+print_version	OptionParser.h	/^    void print_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+print_version	OptionParser.h	/^    void print_version(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+process_opt	OptionParser.cpp	/^void OptionParser::process_opt(const Option& o, const string& opt, const string& value) {$/;"	f	class:optparse::OptionParser	signature:(const Option& o, const string& opt, const string& value)
+process_opt	OptionParser.h	/^    void process_opt(const Option& option, const std::string& opt, const std::string& value);$/;"	p	class:optparse::OptionParser	access:private	signature:(const Option& option, const std::string& opt, const std::string& value)
+prog	OptionParser.h	/^    OptionParser& prog(const std::string& p) { _prog = p; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& p)
+prog	OptionParser.h	/^    const std::string& prog() const { return _prog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+rwrap	OptionParser.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+set_const	OptionParser.h	/^    Option& set_const(const std::string& c) { _const = c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& c)
+set_default	OptionParser.h	/^    Option& set_default(T t) { std::ostringstream ss; ss << t; _default = ss.str(); return *this; }$/;"	f	class:optparse::Option	access:public	signature:(T t)
+set_default	OptionParser.h	/^    Option& set_default(const std::string& d) { _default = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+set_defaults	OptionParser.h	/^    OptionParser& set_defaults(const std::string& dest, const std::string& val) {$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& dest, const std::string& val)
+set_usage	OptionParser.cpp	/^void OptionParser::set_usage(const string& u) {$/;"	f	class:optparse::OptionParser	signature:(const string& u)
+set_usage	OptionParser.h	/^    void set_usage(const std::string& u);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+str	OptionParser.h	/^    const std::string str;$/;"	m	class:optparse::Value	access:private
+strMap	OptionParser.h	/^typedef std::map<std::string,std::string> strMap;$/;"	t	namespace:optparse
+str_format	OptionParser.cpp	/^static string str_format(const string& s, size_t pre, size_t len, bool indent_first = true) {$/;"	f	namespace:optparse	signature:(const string& s, size_t pre, size_t len, bool indent_first = true)
+str_inc	OptionParser.cpp	/^static string str_inc(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+str_join	OptionParser.cpp	/^static string str_join(const string& sep, InputIterator begin, InputIterator end) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end)
+str_join_trans	OptionParser.cpp	/^static string str_join_trans(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op)
+str_replace	OptionParser.cpp	/^static string str_replace(const string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(const string& s, const string& patt, const string& repl)
+str_replace	OptionParser.cpp	/^static string& str_replace(string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(string& s, const string& patt, const string& repl)
+str_wrap	OptionParser.cpp	/^  str_wrap(const string& l, const string& r) : lwrap(l), rwrap(r) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& l, const string& r)
+str_wrap	OptionParser.cpp	/^  str_wrap(const string& w) : lwrap(w), rwrap(w) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& w)
+str_wrap	OptionParser.cpp	/^class str_wrap {$/;"	c	namespace:optparse	file:
+title	OptionParser.h	/^    OptionGroup& title(const std::string& t) { _title = t; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& t)
+title	OptionParser.h	/^    const std::string& title() const { return _title; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+type	OptionParser.h	/^    Option& type(const std::string& t) { _type = t; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& t)
+type	OptionParser.h	/^    const std::string& type() const { return _type; }$/;"	f	class:optparse::Option	access:public	signature:() const
+usage	OptionParser.h	/^    OptionParser& usage(const std::string& u) { set_usage(u); return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+usage	OptionParser.h	/^    const std::string& usage() const { return _usage; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+valid	OptionParser.h	/^    bool valid;$/;"	m	class:optparse::Value	access:private
+version	OptionParser.h	/^    OptionParser& version(const std::string& v) { _version = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& v)
+version	OptionParser.h	/^    const std::string& version() const { return _version; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+write	LogSink.h	/^    virtual void write(LogLevel level, const std::string& msg) = 0;$/;"	p	class:LogSink	access:public	signature:(LogLevel level, const std::string& msg)
+writeMessage	LogSink.cpp	/^void ConsoleSink::writeMessage(LogLevel level, const std::string& msg)$/;"	f	class:ConsoleSink	signature:(LogLevel level, const std::string& msg)
+writeMessage	LogSink.h	/^    virtual void writeMessage(LogLevel level, const std::string& msg);$/;"	p	class:ConsoleSink	access:public	signature:(LogLevel level, const std::string& msg)
+~Callback	OptionParser.h	/^  virtual ~Callback() {}$/;"	f	class:optparse::Callback	access:public	signature:()
+~ConsoleSink	LogSink.cpp	/^ConsoleSink::~ConsoleSink()$/;"	f	class:ConsoleSink	signature:()
+~ConsoleSink	LogSink.h	/^    virtual ~ConsoleSink();$/;"	p	class:ConsoleSink	access:public	signature:()
+~LogSink	LogSink.cpp	/^LogSink::~LogSink()$/;"	f	class:LogSink	signature:()
+~LogSink	LogSink.h	/^    virtual ~LogSink();$/;"	p	class:LogSink	access:public	signature:()
+~Option	OptionParser.h	/^    virtual ~Option() {}$/;"	f	class:optparse::Option	access:public	signature:()
+~OptionGroup	OptionParser.h	/^    virtual ~OptionGroup() {}$/;"	f	class:optparse::OptionGroup	access:public	signature:()
+~OptionParser	OptionParser.h	/^    virtual ~OptionParser() {}$/;"	f	class:optparse::OptionParser	access:public	signature:()

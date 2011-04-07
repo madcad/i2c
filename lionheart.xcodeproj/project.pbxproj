@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* lionheart.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* lionheart.1 */; };
+		B33FF536134E384500636E3B /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B33FF534134E384500636E3B /* Log.cpp */; };
 		B35F8A0E134A60C7009F4437 /* LogSink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35F8A0D134A60C7009F4437 /* LogSink.cpp */; };
+		B35F8A19134A6506009F4437 /* libboost_system.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3730C30131FC0EE0018E045 /* libboost_system.dylib */; };
 		B3730C31131FC0EE0018E045 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3730C30131FC0EE0018E045 /* libboost_system.dylib */; };
 		B3DA5F7813204B0400625EA1 /* OptionParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3DA5F7613204B0400625EA1 /* OptionParser.cpp */; };
 /* End PBXBuildFile section */
@@ -17,19 +19,31 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		8DD76F690486A84900D96B5E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
 				8DD76F6A0486A84900D96B5E /* lionheart.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35F8A18134A64FC009F4437 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				B35F8A19134A6506009F4437 /* libboost_system.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* lionheart */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lionheart; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33FF534134E384500636E3B /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		B33FF535134E384500636E3B /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		B35F8A0B134A60C1009F4437 /* LogSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogSink.h; path = src/LogSink.h; sourceTree = "<group>"; };
 		B35F8A0C134A60C1009F4437 /* OptionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionParser.h; path = src/OptionParser.h; sourceTree = "<group>"; };
 		B35F8A0D134A60C7009F4437 /* LogSink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogSink.cpp; path = src/LogSink.cpp; sourceTree = "<group>"; };
@@ -66,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				B35F8A0D134A60C7009F4437 /* LogSink.cpp */,
+				B33FF534134E384500636E3B /* Log.cpp */,
 				B3DA5F7613204B0400625EA1 /* OptionParser.cpp */,
 				08FB7796FE84155DC02AAC07 /* main.cpp */,
 			);
@@ -91,6 +106,7 @@
 		B3730C6E132040C00018E045 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				B33FF535134E384500636E3B /* Log.h */,
 				B35F8A0B134A60C1009F4437 /* LogSink.h */,
 				B35F8A0C134A60C1009F4437 /* OptionParser.h */,
 			);
@@ -115,6 +131,7 @@
 				8DD76F640486A84900D96B5E /* Sources */,
 				8DD76F660486A84900D96B5E /* Frameworks */,
 				8DD76F690486A84900D96B5E /* CopyFiles */,
+				B35F8A18134A64FC009F4437 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -158,6 +175,7 @@
 				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
 				B3DA5F7813204B0400625EA1 /* OptionParser.cpp in Sources */,
 				B35F8A0E134A60C7009F4437 /* LogSink.cpp in Sources */,
+				B33FF536134E384500636E3B /* Log.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

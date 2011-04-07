@@ -17,6 +17,7 @@
 #ifndef LOG_SINK_H
 #define LOG_SINK_H
 #include <string>
+#include <vector>
 #include <boost/shared_ptr.hpp>
 
 using boost::shared_ptr;
@@ -36,7 +37,7 @@ public:
     LogSink(const std::string& name);
 
     virtual ~LogSink();
-    virtual void write(LogLevel level, const std::string& msg) = 0;
+    virtual void writeMessage(LogLevel level, const std::string& msg)=0;
     std::string getName() const;
 
 private:
