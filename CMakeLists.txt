@@ -12,3 +12,8 @@ add_executable (lionheart main.cpp
     src/Log.cpp
 )
 
+
+install (TARGETS lionheart
+    RUNTIME DESTINATION bin
+)
+
