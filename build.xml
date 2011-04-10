@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project name="lionheart" default="cppcheck" basedir=".">
 
-     <property name="src" value="${basedir}/src"/>
+     <property name="src" value="${basedir}"/>
      <property name="cppcheck" value="cppcheck"/>
 
      <target name="init">
@@ -17,11 +17,6 @@
             <arg value="--xml"/>
             <arg value="--enable=all"/>
             <arg value="${src}"/>
-          </exec>
-          <exec dir="${src}" executable="cppcheck" output="${cppcheck}/cppcheck_main.log" error="${cppcheck}/report_main.xml">
-            <arg value="--xml"/>
-            <arg value="--enable=all"/>
-            <arg value="${basedir}/main.cpp"/>
           </exec>
      </target>
 </project>
