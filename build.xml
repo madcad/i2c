@@ -19,5 +19,15 @@
             <arg value="${src}"/>
           </exec>
      </target>
+        <target name="cpd">
+            <taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask" />
+            <cpd minimumTokenCount="100" outputFile="${basedir}/${cppcheck}/cpd.xml" language="cpp" format="xml">
+                <fileset dir="${basedir}">
+                    <include name="src/**/*.cpp"/>
+                    <include name="main.cpp"/>
+                </fileset>
+            </cpd>
+        </target>
+
 </project>
 
