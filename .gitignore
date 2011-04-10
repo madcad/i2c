@@ -49,6 +49,7 @@ TestResults/
 ######################
 *.log
 *.sqlite
+cppcheck
 # OS generated files #
 ######################
 .DS_Store?
