@@ -19,9 +19,11 @@
 #include <string>
 #include <vector>
 #include <boost/shared_ptr.hpp>
+#include <memory>
 
 using boost::shared_ptr;
 
+namespace lionheart {
 enum LogLevel {
     LOG_NOTE,
     LOG_VERBOSE,
@@ -60,6 +62,6 @@ public:
 
     virtual void writeMessage(LogLevel level, const std::string& msg);
 };
-
+}
 #endif
 

@@ -16,30 +16,30 @@
 
 #include "LogSink.h"
 
-LogSink::LogSink(const std::string& name) :
+lionheart::LogSink::LogSink(const std::string& name) :
     m_Name(name)
 {
 }
 
-LogSink::~LogSink()
+lionheart::LogSink::~LogSink()
 {
 }
 
-std::string LogSink::getName() const
+std::string lionheart::LogSink::getName() const
 {
     return this->m_Name;
 }
 
-ConsoleSink::ConsoleSink(const std::string& name) :
+lionheart::ConsoleSink::ConsoleSink(const std::string& name) :
     LogSink(name)
 {
 }
 
-ConsoleSink::~ConsoleSink()
+lionheart::ConsoleSink::~ConsoleSink()
 {
 }
 
-void ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
+void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
 {
     static const char* pre[] = { "    NOTE: ",
                            " VERBOSE: ",

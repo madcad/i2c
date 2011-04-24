@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* lionheart.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* lionheart.1 */; };
-		B33FF536134E384500636E3B /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B33FF534134E384500636E3B /* Log.cpp */; };
 		B35F8A0E134A60C7009F4437 /* LogSink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35F8A0D134A60C7009F4437 /* LogSink.cpp */; };
-		B35F8A19134A6506009F4437 /* libboost_system.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3730C30131FC0EE0018E045 /* libboost_system.dylib */; };
-		B3730C31131FC0EE0018E045 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3730C30131FC0EE0018E045 /* libboost_system.dylib */; };
 		B3DA5F7813204B0400625EA1 /* OptionParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3DA5F7613204B0400625EA1 /* OptionParser.cpp */; };
+		B3DAE4621351FB5600A93720 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3DAE4601351FB5600A93720 /* Log.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				B35F8A19134A6506009F4437 /* libboost_system.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,13 +39,12 @@
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* lionheart */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lionheart; sourceTree = BUILT_PRODUCTS_DIR; };
-		B33FF534134E384500636E3B /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
-		B33FF535134E384500636E3B /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		B35F8A0B134A60C1009F4437 /* LogSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogSink.h; path = src/LogSink.h; sourceTree = "<group>"; };
 		B35F8A0C134A60C1009F4437 /* OptionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionParser.h; path = src/OptionParser.h; sourceTree = "<group>"; };
 		B35F8A0D134A60C7009F4437 /* LogSink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogSink.cpp; path = src/LogSink.cpp; sourceTree = "<group>"; };
-		B3730C30131FC0EE0018E045 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = shared_content/lib/macosx/libboost_system.dylib; sourceTree = "<group>"; };
 		B3DA5F7613204B0400625EA1 /* OptionParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionParser.cpp; path = src/OptionParser.cpp; sourceTree = "<group>"; };
+		B3DAE4601351FB5600A93720 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = src/Log.cpp; sourceTree = "<group>"; };
+		B3DAE4611351FB5600A93720 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = src/Log.h; sourceTree = "<group>"; };
 		C6859E8B029090EE04C91782 /* lionheart.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lionheart.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3730C31131FC0EE0018E045 /* libboost_system.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +74,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B3DAE4601351FB5600A93720 /* Log.cpp */,
 				B35F8A0D134A60C7009F4437 /* LogSink.cpp */,
-				B33FF534134E384500636E3B /* Log.cpp */,
 				B3DA5F7613204B0400625EA1 /* OptionParser.cpp */,
 				08FB7796FE84155DC02AAC07 /* main.cpp */,
 			);
@@ -98,7 +93,6 @@
 		B3730C2D131FC0E00018E045 /* External libs */ = {
 			isa = PBXGroup;
 			children = (
-				B3730C30131FC0EE0018E045 /* libboost_system.dylib */,
 			);
 			name = "External libs";
 			sourceTree = "<group>";
@@ -106,7 +100,7 @@
 		B3730C6E132040C00018E045 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				B33FF535134E384500636E3B /* Log.h */,
+				B3DAE4611351FB5600A93720 /* Log.h */,
 				B35F8A0B134A60C1009F4437 /* LogSink.h */,
 				B35F8A0C134A60C1009F4437 /* OptionParser.h */,
 			);
@@ -175,7 +169,7 @@
 				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
 				B3DA5F7813204B0400625EA1 /* OptionParser.cpp in Sources */,
 				B35F8A0E134A60C7009F4437 /* LogSink.cpp in Sources */,
-				B33FF536134E384500636E3B /* Log.cpp in Sources */,
+				B3DAE4621351FB5600A93720 /* Log.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

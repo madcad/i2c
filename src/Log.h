@@ -11,7 +11,7 @@
 #include <sstream>
 
 #include "LogSink.h"
-
+namespace lionheart {
 class Log {
 public:
     Log();
@@ -32,3 +32,4 @@ private:
     LogLevel m_lastLevel;
     std::list<LogSinkPtr> m_sinks;
 };
+}
