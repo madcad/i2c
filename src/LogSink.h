@@ -24,44 +24,37 @@
 using boost::shared_ptr;
 
 namespace lionheart {
-enum LogLevel {
-    LOG_NOTE,
-    LOG_VERBOSE,
-    LOG_WARNING,
-    LOG_ERROR,
-    LOG_CRITICAL
-};
+    enum LogLevel {
+        LOG_NOTE, LOG_VERBOSE, LOG_WARNING, LOG_ERROR, LOG_CRITICAL
+    };
 
-class LogSink
-{
+    class LogSink {
 
-public:
-    LogSink(const std::string& name);
+    public:
+        LogSink(const std::string& name);
 
-    virtual ~LogSink();
-    virtual void writeMessage(LogLevel level, const std::string& msg)=0;
-    std::string getName() const;
+        virtual ~LogSink();
+        virtual void writeMessage(LogLevel level, const std::string& msg)=0;
+        std::string getName() const;
 
-private:
-    std::string m_Name;
-    LogSink(const LogSink&);
-    LogSink& operator=(const LogSink&);
-};
+    private:
+        std::string m_Name;
+        LogSink(const LogSink&);
+        LogSink& operator=(const LogSink&);
+    };
 
-// Type: LogSinkPtr
-//  Pointer to a log sink, used since LogSink is abstract and will always
-//  be accessed via a pointer.
-typedef shared_ptr<LogSink> LogSinkPtr;
+    // Type: LogSinkPtr
+    //  Pointer to a log sink, used since LogSink is abstract and will always
+    //  be accessed via a pointer.
+    typedef shared_ptr<LogSink> LogSinkPtr;
 
+    class ConsoleSink: public LogSink {
+    public:
+        ConsoleSink(const std::string& name);
+        virtual ~ConsoleSink();
 
-class ConsoleSink : public LogSink
-{
-public:
-    ConsoleSink(const std::string& name);
-    virtual ~ConsoleSink();
-
-    virtual void writeMessage(LogLevel level, const std::string& msg);
-};
+        virtual void writeMessage(LogLevel level, const std::string& msg);
+    };
 }
 #endif
 
