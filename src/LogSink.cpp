@@ -56,7 +56,7 @@ void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg
 
 lionheart::FileSink::FileSink(const std::string& name) :
     LogSink(name),
-    m_OutStream(std::string(name+".log").c_str())
+    m_OutStream(std::string(name + ".log").c_str())
 {
 }
 

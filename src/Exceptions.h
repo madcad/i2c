@@ -26,6 +26,7 @@ namespace lionheart {
         std::string m_szFile;
         unsigned int m_iLine;
     };
+    class PreconditionException : public Exception {};
 }
 
 #endif /* EXCEPTIONS_H_ */
