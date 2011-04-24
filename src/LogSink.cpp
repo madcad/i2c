@@ -46,10 +46,10 @@ lionheart::ConsoleSink::~ConsoleSink()
 void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
 {
     static const char* pre[] = { "    NOTE: ",
-                           " VERBOSE: ",
-                           " WARNING: ",
-                           "   ERROR: ",
-                           "CRITICAL: " };
+                                 " VERBOSE: ",
+                                 " WARNING: ",
+                                 "   ERROR: ",
+                                 "CRITICAL: " };
 
     std::cerr << pre[static_cast<int>(level)] << msg << std::endl;
 }
@@ -67,17 +67,14 @@ lionheart::FileSink::~FileSink()
 
 void lionheart::FileSink::writeMessage(LogLevel level, const std::string& msg)
 {
-    static const char* pre[] = { "     NOTE: ",
-                           "  VERBOSE: ",
-                           "  WARNING: ",
-                           "    ERROR: ",
-                           " CRITICAL: " };
+    static const char* pre[] = { "    NOTE: ",
+                                 " VERBOSE: ",
+                                 " WARNING: ",
+                                 "   ERROR: ",
+                                 "CRITICAL: " };
 
     boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
-
     boost::posix_time::time_duration tod = now.time_of_day();
-    m_OutStream
-        << now.date() << " "
-        << tod
+    m_OutStream << now.date() << " " << tod << " "
         << pre[static_cast<int>(level)] << msg << std::endl;
 }
