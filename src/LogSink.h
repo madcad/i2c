@@ -14,15 +14,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef LOG_SINK_H
-#define LOG_SINK_H
 #include <string>
 #include <vector>
 #include <boost/shared_ptr.hpp>
 #include <memory>
+#include <fstream>
 
 using boost::shared_ptr;
 
+#ifndef LOG_SINK_H_
+#define LOG_SINK_H_
 namespace lionheart {
     enum LogLevel {
         LOG_NOTE, LOG_VERBOSE, LOG_WARNING, LOG_ERROR, LOG_CRITICAL
@@ -54,6 +55,16 @@ namespace lionheart {
         virtual ~ConsoleSink();
 
         virtual void writeMessage(LogLevel level, const std::string& msg);
+    };
+
+    class FileSink: public LogSink {
+    public:
+        FileSink(const std::string& name);
+        ~FileSink();
+
+        virtual void writeMessage(LogLevel level, const std::string& msg);
+    private:
+        std::ofstream m_OutStream;
     };
 }
 #endif

@@ -15,6 +15,10 @@
  */
 
 #include "LogSink.h"
+#include "boost/date_time/gregorian/gregorian.hpp"
+#include "boost/date_time/posix_time/posix_time.hpp"
+
+
 
 lionheart::LogSink::LogSink(const std::string& name) :
     m_Name(name)
@@ -48,4 +52,32 @@ void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg
                            "CRITICAL: " };
 
     std::cerr << pre[static_cast<int>(level)] << msg << std::endl;
+}
+
+lionheart::FileSink::FileSink(const std::string& name) :
+    LogSink(name),
+    m_OutStream(std::string(name+".log").c_str())
+{
+}
+
+lionheart::FileSink::~FileSink()
+{
+    m_OutStream.close();
+}
+
+void lionheart::FileSink::writeMessage(LogLevel level, const std::string& msg)
+{
+    static const char* pre[] = { "     NOTE: ",
+                           "  VERBOSE: ",
+                           "  WARNING: ",
+                           "    ERROR: ",
+                           " CRITICAL: " };
+
+    boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
+
+    boost::posix_time::time_duration tod = now.time_of_day();
+    m_OutStream
+        << now.date() << " "
+        << tod
+        << pre[static_cast<int>(level)] << msg << std::endl;
 }

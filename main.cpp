@@ -37,6 +37,7 @@ int main (int argc, char * const argv[]) {
     // insert code here...
     lionheart::Log log;
     log.addSink(lionheart::LogSinkPtr(new lionheart::ConsoleSink("out")));
+    log.addSink(lionheart::LogSinkPtr(new lionheart::FileSink("debug")));
     const string usage = "usage: %prog [OPTION]... DIR [FILE]...";
 
     const string version = "%prog 0.0.1\nCopyright (C) 2011 mad-cad.net\n"

@@ -1,5 +1,6 @@
 # xcode noise
 build/*
+build_openwrt/*
 *.pbxuser
 *.mode1v3
 

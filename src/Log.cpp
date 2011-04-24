@@ -26,7 +26,7 @@ void lionheart::Log::addSink(LogSinkPtr sink)
     {
         if(sink == *it || sink->getName() == (*it)->getName())
         {
-            return;
+            throw Exception(std::string("Sink '" + sink->getName() + " already exists"), __FILE__, __LINE__);
         }
     }
 
