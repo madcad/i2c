@@ -5,9 +5,14 @@
 //  Created by Torsten Walluhn on 07.04.11.
 //  Copyright 2011 mad-cad.net. All rights reserved.
 //
+
+
 #include <string>
 #include <list>
 #include <sstream>
+
+#ifndef LOG_H_
+#define LOG_H_
 
 #include "LogSink.h"
 #include "Exceptions.h"
@@ -34,4 +39,4 @@ namespace lionheart {
         std::list<LogSinkPtr> m_sinks;
     };
 }
-
+#endif

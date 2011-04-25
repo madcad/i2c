@@ -12,9 +12,5 @@ link_directories ("${PROJECT_SOURCE_DIR}/shared_content/lib/macosx")
 #    src/OptionParser.cpp
 #)
 add_subdirectory (src)
-add_executable (lion main.cpp)
-target_link_libraries (lion lionheart)
+add_subdirectory (demo)
 
-install (TARGETS lion
-    RUNTIME DESTINATION bin
-)
