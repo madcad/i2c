@@ -11,6 +11,7 @@ link_directories ("${PROJECT_SOURCE_DIR}/shared_content/lib/macosx")
 #    src/Log.cpp
 #    src/OptionParser.cpp
 #)
+add_subdirectory (libs)
 add_subdirectory (src)
 add_subdirectory (demo)
 

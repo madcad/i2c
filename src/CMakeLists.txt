@@ -8,4 +8,4 @@ add_library (lionheart
     OptionParser.cpp
 )
 
-target_link_libraries (lionheart lionheart_core)
+target_link_libraries (lionheart lionheart_core liblua)
