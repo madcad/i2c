@@ -11,12 +11,6 @@
 #include "Log.h"
 
 int lionheart::core::Application::run(int argc, const char** argv) {
-    m_Logger.warning() << "App started22: " << __LINE__;
-    m_Logger.warning() << "App started22: " << __LINE__;
-    m_Logger.warning() << "App started22: " << __LINE__;
-    m_Logger.warning() << "App started22: " << __LINE__;
-    m_Logger.warning() << "App started22: " << __LINE__;
-    m_Logger.warning() << "App started22: " << __LINE__;
     m_OptionParser.parse_args(argc, argv);
     // vector<string> args = parser.args();
     if (argc == 0) {
@@ -25,7 +19,6 @@ int lionheart::core::Application::run(int argc, const char** argv) {
     }
     return 0;
 }
-
 
 lionheart::core::Application::Application() {
     m_szUsage = "usage: %prog [OPTION]... DIR [FILE]...";
