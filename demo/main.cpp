@@ -14,17 +14,36 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <ctime>
+// #include <ctime>
 #include <iostream>
-#include <iterator>
-#include <string>
+// #include <iterator>
+// #include <string>
 #include "core/Application.h"
-#include "OptionParser.h"
-#include "Log.h"
-#include "LogSink.h"
+#include "Exceptions.h"
+// #include "OptionParser.h"
+// #include "Log.h"
+// #include "LogSink.h"
+#include <boost/thread.hpp>
+#include <boost/date_time.hpp>
 
 
-using namespace std;
+// using namespace std;
+
+
+void workerFunc()
+{
+    boost::posix_time::seconds workTime(3);
+
+    std::cout << "Worker: running" << std::endl;
+    std::cout << "Thread ID: " << boost::this_thread::get_id() << std::endl;
+
+    // Pretend to do something useful...
+    boost::this_thread::sleep(workTime);
+
+    std::cout << "Worker: finished" << std::endl;
+}
+
+
 
 /**
  * @brief Main function to start lionhearth.
@@ -39,13 +58,15 @@ int main (int argc, const char * argv[]) {
     try {
         int return_code = lionheart::core::Application::getInstance()->run(argc, argv);
 
+        boost::thread workerThread(workerFunc);
         return_code = lionheart::core::Application::getInstance()->run(argc, argv);
+        workerThread.join();
         return return_code;
-    } catch (exception& e) {
-        cerr << "error: " << e.what() << "\n";
+    } catch (lionheart::Exception& e) {
+        std::cerr << "error: " << e.what() << "\n";
         return 1;
     } catch (...) {
-        cerr << "Exception of unknown type!\n";
+        std::cerr << "Exception of unknown type!\n";
         return 255;
     }
     return 0;

@@ -2,6 +2,7 @@ project (Lionheart)
 cmake_minimum_required (VERSION 2.6)
 include_directories ("${PROJECT_SOURCE_DIR}/shared_content/include")
 include_directories ("${PROJECT_SOURCE_DIR}/src")
+include_directories ("${PROJECT_SOURCE_DIR}/libs/lua/src")
 link_directories ("${PROJECT_SOURCE_DIR}/shared_content/lib/macosx")
 
 

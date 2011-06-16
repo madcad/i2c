@@ -1,5 +1,6 @@
 
 add_subdirectory (core)
+add_subdirectory (net)
 
 add_library (lionheart
     Exceptions.cpp
