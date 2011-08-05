@@ -20,23 +20,16 @@
 
 #include "core/Singleton.h"
 #include "Log.h"
-#include "OptionParser.h"
-#include <string>
 
 namespace lionheart {
     namespace core {
-        class Application : public Singleton<Application> {
-        friend class Singleton<Application>;
+        class Application {
         protected:
-            std::string m_szUsage;
-            std::string m_szVersion;
-            optparse::OptionParser m_OptionParser;
             lionheart::Log m_Logger;
             Application();
             ~Application();
         public:
-            void app();
-            int run(int argc,const char * argv[]);
+            virtual int run(int argc,const char * argv[]) = 0;
         };
     }
 }

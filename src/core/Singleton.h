@@ -25,9 +25,18 @@
 
 namespace lionheart {
     namespace core {
+        /**
+         * @class Singleton
+         * @brief Singleton class template based on boost::noncopyable
+         */
         template<typename T>
         class Singleton: public boost::noncopyable {
         public:
+
+            /**
+             * @brief  Destroy function.
+             * @return void
+             */
             static void destroy() {
                 if (m_instance == 0) {
                     throw PreconditionException();
@@ -38,6 +47,11 @@ namespace lionheart {
                     m_instance = 0;
                 }
             };
+
+            /**
+             * @brief  Return the class instance.
+             * @return T
+             */
             static T* getInstance(){
                 if (!m_instance) {
                     m_instance = new T();

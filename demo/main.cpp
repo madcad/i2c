@@ -19,6 +19,7 @@
 // #include <iterator>
 // #include <string>
 #include "core/Application.h"
+#include "core/ConsoleApplication.h"
 #include "Exceptions.h"
 // #include "OptionParser.h"
 // #include "Log.h"
@@ -56,10 +57,10 @@ void workerFunc()
 int main (int argc, const char * argv[]) {
     // insert code here...
     try {
-        int return_code = lionheart::core::Application::getInstance()->run(argc, argv);
+        int return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
 
         boost::thread workerThread(workerFunc);
-        return_code = lionheart::core::Application::getInstance()->run(argc, argv);
+        return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
         workerThread.join();
         return return_code;
     } catch (lionheart::Exception& e) {

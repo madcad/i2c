@@ -1,5 +1,6 @@
 add_library (lionheart_core
     Application.cpp
+    ConsoleApplication.cpp
     Singleton.cpp
 )
 
