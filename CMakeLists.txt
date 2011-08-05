@@ -19,7 +19,7 @@ ENDIF()
 #    src/Log.cpp
 #    src/OptionParser.cpp
 #)
-add_subdirectory (libs)
+# add_subdirectory (libs)
 add_subdirectory (src)
 add_subdirectory (demo)
 

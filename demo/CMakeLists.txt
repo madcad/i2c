@@ -1,5 +1,8 @@
 
-add_executable (lion main.cpp)
+add_executable (lion
+    main.cpp
+    ConsoleApplication.cpp
+)
 
 # target_link_libraries (lion lionheart lionheart_core boost_date_time-xgcc42-mt boost_system-xgcc42-mt boost_thread-xgcc42-mt)
 # target_link_libraries (lion lionheart lionheart_core ${Boost_date_LIBRARY} ${Boost_system_LIBRARY}

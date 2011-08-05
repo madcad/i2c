@@ -18,8 +18,7 @@
 #include <iostream>
 // #include <iterator>
 // #include <string>
-#include "core/Application.h"
-#include "core/ConsoleApplication.h"
+#include "ConsoleApplication.h"
 #include "Exceptions.h"
 // #include "OptionParser.h"
 // #include "Log.h"
@@ -57,7 +56,7 @@
 int main (int argc, const char * argv[]) {
     // insert code here...
     try {
-        int return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
+        int return_code = lion::ConsoleApplication::getInstance()->run(argc, argv);
 
         // boost::thread workerThread(workerFunc);
         // return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);

@@ -36,6 +36,7 @@ namespace lionheart {
         unsigned int m_iLine;
     };
     class PreconditionException : public Exception {};
+    class InteruptException: public Exception {};
 }
 
 #endif /* EXCEPTIONS_H_ */
