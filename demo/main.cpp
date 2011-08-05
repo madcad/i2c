@@ -31,18 +31,18 @@
 // using namespace std;
 
 
-void workerFunc()
-{
-    boost::posix_time::seconds workTime(3);
-
-    std::cout << "Worker: running" << std::endl;
-    std::cout << "Thread ID: " << boost::this_thread::get_id() << std::endl;
-
-    // Pretend to do something useful...
-    boost::this_thread::sleep(workTime);
-
-    std::cout << "Worker: finished" << std::endl;
-}
+// void workerFunc()
+// {
+//     boost::posix_time::seconds workTime(3);
+//
+//     std::cout << "Worker: running" << std::endl;
+//     std::cout << "Thread ID: " << boost::this_thread::get_id() << std::endl;
+//
+//     // Pretend to do something useful...
+//     boost::this_thread::sleep(workTime);
+//
+//     std::cout << "Worker: finished" << std::endl;
+// }
 
 
 
@@ -59,9 +59,9 @@ int main (int argc, const char * argv[]) {
     try {
         int return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
 
-        boost::thread workerThread(workerFunc);
-        return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
-        workerThread.join();
+        // boost::thread workerThread(workerFunc);
+        // return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
+        // workerThread.join();
         return return_code;
     } catch (lionheart::Exception& e) {
         std::cerr << "error: " << e.what() << "\n";
