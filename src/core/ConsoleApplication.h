@@ -8,7 +8,7 @@
 #ifndef CONSOLEAPPLICATION_H_
 #define CONSOLEAPPLICATION_H_
 
-#include "Application.h"
+#include "core/Application.h"
 #include "OptionParser.h"
 #include <string>
 

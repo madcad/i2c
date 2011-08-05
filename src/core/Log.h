@@ -22,29 +22,31 @@
 #ifndef LOG_H_
 #define LOG_H_
 
-#include "LogSink.h"
+#include "core/LogSink.h"
 #include "Exceptions.h"
 
 namespace lionheart {
-    class Log {
-    public:
-        Log();
-        ~Log();
-        void addSink(LogSinkPtr sink);
-        void removeSink(const std::string& sinkName);
-        void removeSink(LogSinkPtr sink);
-        void removeSinks();
-    public:
-        std::ostream& note();
-        std::ostream& verbose();
-        std::ostream& warning();
-        std::ostream& error();
-        std::ostream& critical();
-        void flush();
-    private:
-        std::stringstream m_buffer;
-        LogLevel m_lastLevel;
-        std::list<LogSinkPtr> m_sinks;
-    };
+    namespace core {
+        class Log {
+        public:
+            Log();
+            ~Log();
+            void addSink(LogSinkPtr sink);
+            void removeSink(const std::string& sinkName);
+            void removeSink(LogSinkPtr sink);
+            void removeSinks();
+        public:
+            std::ostream& note();
+            std::ostream& verbose();
+            std::ostream& warning();
+            std::ostream& error();
+            std::ostream& critical();
+            void flush();
+        private:
+            std::stringstream m_buffer;
+            LogLevel m_lastLevel;
+            std::list<LogSinkPtr> m_sinks;
+        };
+    }
 }
 #endif

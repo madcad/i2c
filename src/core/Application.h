@@ -19,13 +19,13 @@
 #define APPLICATION_H_
 
 #include "core/Singleton.h"
-#include "Log.h"
+#include "core/Log.h"
 
 namespace lionheart {
     namespace core {
         class Application {
         protected:
-            lionheart::Log m_Logger;
+            lionheart::core::Log m_Logger;
             Application();
             ~Application();
         public:

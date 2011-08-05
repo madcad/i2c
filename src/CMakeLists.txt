@@ -4,8 +4,8 @@ add_subdirectory (net)
 
 add_library (lionheart
     Exceptions.cpp
-    LogSink.cpp
-    Log.cpp
+    # LogSink.cpp
+    # Log.cpp
     OptionParser.cpp
 )
 

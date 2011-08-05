@@ -15,12 +15,12 @@
  */
 
 
-#include "Log.h"
+#include "core/Log.h"
 
-lionheart::Log::Log()
+lionheart::core::Log::Log()
 {}
 
-lionheart::Log::~Log()
+lionheart::core::Log::~Log()
 {
     this->removeSinks();
 }
@@ -28,7 +28,7 @@ lionheart::Log::~Log()
 /**
  * Add a log Sink to the logger.
  */
-void lionheart::Log::addSink(LogSinkPtr sink)
+void lionheart::core::Log::addSink(LogSinkPtr sink)
 {
     this->flush();
 
@@ -48,7 +48,7 @@ void lionheart::Log::addSink(LogSinkPtr sink)
 /**
  * Remove a log Sink to the logger by it's name.
  */
-void lionheart::Log::removeSink(const std::string& sinkName)
+void lionheart::core::Log::removeSink(const std::string& sinkName)
 {
     this->flush();
 
@@ -67,7 +67,7 @@ void lionheart::Log::removeSink(const std::string& sinkName)
 /**
  * Remove a log Sink to the logger by it's instance.
  */
-void lionheart::Log::removeSink(LogSinkPtr sink)
+void lionheart::core::Log::removeSink(LogSinkPtr sink)
 {
     this->flush();
 
@@ -85,7 +85,7 @@ void lionheart::Log::removeSink(LogSinkPtr sink)
 /**
  * Remove all sinks.
  */
-void lionheart::Log::removeSinks()
+void lionheart::core::Log::removeSinks()
 {
     this->flush();    // make sure last message gets flushed to sinks
 
@@ -95,7 +95,7 @@ void lionheart::Log::removeSinks()
 /**
  * Flaush all log sinks.
  */
-void lionheart::Log::flush()
+void lionheart::core::Log::flush()
 {
     std::string str = this->m_buffer.str();    // get string from buffer
     if(str.length())    // if a message exists, write it to all sinks
@@ -112,35 +112,35 @@ void lionheart::Log::flush()
 
 // note, verbose, warning, error, critical all flush the existing buffer
 // set the level and return the stringstream for writing
-std::ostream& lionheart::Log::note()
+std::ostream& lionheart::core::Log::note()
 {
     this->flush();
     this->m_lastLevel = LOG_NOTE;
     return this->m_buffer;
 }
 
-std::ostream& lionheart::Log::verbose()
+std::ostream& lionheart::core::Log::verbose()
 {
     this->flush();
     this->m_lastLevel = LOG_VERBOSE;
     return this->m_buffer;
 }
 
-std::ostream& lionheart::Log::warning()
+std::ostream& lionheart::core::Log::warning()
 {
     this->flush();
     this->m_lastLevel = LOG_WARNING;
     return this->m_buffer;
 }
 
-std::ostream& lionheart::Log::error()
+std::ostream& lionheart::core::Log::error()
 {
     this->flush();
     this->m_lastLevel = LOG_ERROR;
     return this->m_buffer;
 }
 
-std::ostream& lionheart::Log::critical()
+std::ostream& lionheart::core::Log::critical()
 {
     this->flush();
     this->m_lastLevel = LOG_CRITICAL;

@@ -14,36 +14,34 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "LogSink.h"
+#include "core/LogSink.h"
 #include "boost/date_time/gregorian/gregorian.hpp"
 #include "boost/date_time/posix_time/posix_time.hpp"
 
-
-
-lionheart::LogSink::LogSink(const std::string& name) :
+lionheart::core::LogSink::LogSink(const std::string& name) :
     m_Name(name)
 {
 }
 
-lionheart::LogSink::~LogSink()
+lionheart::core::LogSink::~LogSink()
 {
 }
 
-std::string lionheart::LogSink::getName() const
+std::string lionheart::core::LogSink::getName() const
 {
     return this->m_Name;
 }
 
-lionheart::ConsoleSink::ConsoleSink(const std::string& name) :
+lionheart::core::ConsoleSink::ConsoleSink(const std::string& name) :
     LogSink(name)
 {
 }
 
-lionheart::ConsoleSink::~ConsoleSink()
+lionheart::core::ConsoleSink::~ConsoleSink()
 {
 }
 
-void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
+void lionheart::core::ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
 {
     static const char* pre[] = { "    NOTE: ",
                                  " VERBOSE: ",
@@ -56,18 +54,18 @@ void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg
     std::cerr << now.date() << " " << tod << " " << pre[static_cast<int>(level)] << msg << std::endl;
 }
 
-lionheart::FileSink::FileSink(const std::string& name) :
+lionheart::core::FileSink::FileSink(const std::string& name) :
     LogSink(name),
     m_OutStream(std::string(name + ".log").c_str())
 {
 }
 
-lionheart::FileSink::~FileSink()
+lionheart::core::FileSink::~FileSink()
 {
     m_OutStream.close();
 }
 
-void lionheart::FileSink::writeMessage(LogLevel level, const std::string& msg)
+void lionheart::core::FileSink::writeMessage(LogLevel level, const std::string& msg)
 {
     static const char* pre[] = { "    NOTE: ",
                                  " VERBOSE: ",
