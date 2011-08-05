@@ -25,6 +25,9 @@ lionheart::Log::~Log()
     this->removeSinks();
 }
 
+/**
+ * Add a log Sink to the logger.
+ */
 void lionheart::Log::addSink(LogSinkPtr sink)
 {
     this->flush();
@@ -42,9 +45,12 @@ void lionheart::Log::addSink(LogSinkPtr sink)
     this->m_sinks.push_back(sink);
 }
 
+/**
+ * Remove a log Sink to the logger by it's name.
+ */
 void lionheart::Log::removeSink(const std::string& sinkName)
 {
-    flush();
+    this->flush();
 
     // find sink and erase it
     for (std::list<LogSinkPtr>::iterator it = this->m_sinks.begin();
@@ -58,9 +64,12 @@ void lionheart::Log::removeSink(const std::string& sinkName)
     }
 }
 
+/**
+ * Remove a log Sink to the logger by it's instance.
+ */
 void lionheart::Log::removeSink(LogSinkPtr sink)
 {
-    flush();
+    this->flush();
 
     // search for sink
     std::list<LogSinkPtr>::iterator it =
@@ -73,13 +82,19 @@ void lionheart::Log::removeSink(LogSinkPtr sink)
     }
 }
 
+/**
+ * Remove all sinks.
+ */
 void lionheart::Log::removeSinks()
 {
-    flush();    // make sure last message gets flushed to sinks
+    this->flush();    // make sure last message gets flushed to sinks
 
     this->m_sinks.clear();     // empty entire sink list
 }
 
+/**
+ * Flaush all log sinks.
+ */
 void lionheart::Log::flush()
 {
     std::string str = this->m_buffer.str();    // get string from buffer

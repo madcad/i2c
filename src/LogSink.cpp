@@ -51,7 +51,9 @@ void lionheart::ConsoleSink::writeMessage(LogLevel level, const std::string& msg
                                  "   ERROR: ",
                                  "CRITICAL: " };
 
-    std::cerr << pre[static_cast<int>(level)] << msg << std::endl;
+    boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
+    boost::posix_time::time_duration tod = now.time_of_day();
+    std::cerr << now.date() << " " << tod << " " << pre[static_cast<int>(level)] << msg << std::endl;
 }
 
 lionheart::FileSink::FileSink(const std::string& name) :
