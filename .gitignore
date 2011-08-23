@@ -4,6 +4,9 @@ build_openwrt/*
 *.pbxuser
 *.mode1v3
 
+
+nbproject/*
+
 # old skool
 .svn
 
@@ -21,6 +24,7 @@ profile
 *.pdb
 *.dll.config
 *.cache
+tags
 # VS Upgrade stuff #
 ####################
 UpgradeLog.XML
@@ -61,3 +65,4 @@ Thumbs.db
 /doc
 /doc_
 
+/cscope.*
