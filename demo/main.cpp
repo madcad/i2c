@@ -57,6 +57,7 @@ int main (int argc, const char * argv[]) {
     // insert code here...
     try {
         int return_code = lion::ConsoleApplication::getInstance()->run(argc, argv);
+        lion::ConsoleApplication::destroy();
 
         // boost::thread workerThread(workerFunc);
         // return_code = lionheart::core::ConsoleApplication::getInstance()->run(argc, argv);
@@ -69,6 +70,5 @@ int main (int argc, const char * argv[]) {
         std::cerr << "Exception of unknown type!\n";
         return 255;
     }
-    lion::ConsoleApplication::destroy();
     return 0;
 }
