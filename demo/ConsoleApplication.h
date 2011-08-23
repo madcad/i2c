@@ -24,15 +24,9 @@ namespace lion {
         std::string m_szVersion;
         optparse::OptionParser m_OptionParser;
         void _run();
-        static void _finish(int sig) {
-            ConsoleApplication::m_bRunning = false;
-            endwin();
-            // exit(0);
-        }
-        static bool m_bRunning;
     public:
         ConsoleApplication();
-        virtual ~ConsoleApplication();
+        ~ConsoleApplication();
         int run(int argc,const char * argv[]);
     };
 }

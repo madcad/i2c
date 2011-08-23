@@ -69,5 +69,6 @@ int main (int argc, const char * argv[]) {
         std::cerr << "Exception of unknown type!\n";
         return 255;
     }
+    lion::ConsoleApplication::destroy();
     return 0;
 }

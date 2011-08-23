@@ -29,6 +29,7 @@ namespace lionheart {
             Application();
             ~Application();
         public:
+            lionheart::core::Log * getLogger();
             virtual int run(int argc,const char * argv[]) = 0;
         };
     }

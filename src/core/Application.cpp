@@ -34,3 +34,7 @@ lionheart::core::Application::Application() {
 lionheart::core::Application::~Application() {
     m_Logger.flush();
 }
+
+lionheart::core::Log * lionheart::core::Application::getLogger() {
+    return &m_Logger;
+}
