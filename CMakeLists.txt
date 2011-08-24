@@ -1,7 +1,7 @@
 project (Lionheart)
 cmake_minimum_required (VERSION 2.6)
 set(Boost_ADDITIONAL_VERSIONS "1.47" "1.47.0")
-FIND_PACKAGE(Boost)
+FIND_PACKAGE(Boost COMPONENTS thread)
 
 # include_directories ("${PROJECT_SOURCE_DIR}/shared_content/include")
 include_directories ("${PROJECT_SOURCE_DIR}/src")
@@ -12,6 +12,8 @@ IF (Boost_FOUND)
     link_directories (${Boost_LIBRARY_DIRS})
     ADD_DEFINITIONS( "-DHAS_BOOST" )
 ENDIF()
+message(STATUS "BOOST INC=${Boost_INCLUDE_DIRS}")
+message(STATUS "BOOST LIB=${Boost_LIBRARY_DIRS}")
 
 #add_executable (lionheart main.cpp
 #    src/Exceptions.cpp

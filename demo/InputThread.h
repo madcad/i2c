@@ -14,36 +14,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _CONSOLEAPPLICATION_H_
-#define _CONSOLEAPPLICATION_H_
-
-#include "core/Application.h"
-#include "core/Singleton.h"
-#include "OptionParser.h"
-#include "InputThread.h"
-#include <string>
-#include <boost/thread.hpp>
-
-#define LOGGER ConsoleApplication::getInstance()->getLogger()
+#ifndef _INPUTTHREAD_H_
+#define _INPUTTHREAD_H_
 
 namespace lion {
-    class InputThread;
-
-    class ConsoleApplication: public lionheart::core::Application,
-    public lionheart::core::Singleton<ConsoleApplication>
+    class InputThread
     {
-        friend class lionheart::core::Singleton<ConsoleApplication>;
-        friend class InputThread;
     protected:
-        bool running;
-        std::string m_szUsage;
-        std::string m_szVersion;
-        optparse::OptionParser m_OptionParser;
-        void _run();
     public:
-        ConsoleApplication();
-        ~ConsoleApplication();
-        int run(int argc,const char * argv[]);
+        InputThread();
+        ~InputThread();
+        void run();
     };
 }
 

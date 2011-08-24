@@ -18,6 +18,7 @@
 #include "ConsoleApplication.h"
 #include <iostream>
 
+
 namespace lion {
 
     ConsoleApplication::ConsoleApplication()
@@ -33,6 +34,8 @@ namespace lion {
         m_Logger.addSink(lionheart::core::LogSinkPtr(new lionheart::core::ConsoleSink("out")));
         m_Logger.warning() << "App started";
         m_Logger.flush();
+
+        running = true;
 
     }
 
@@ -52,5 +55,11 @@ namespace lion {
     }
     void ConsoleApplication::_run() {
         this->getLogger()->warning() << "test";
+        InputThread tc;
+        boost::thread thread(&InputThread::run, &tc);
+        // thread.join();
+        // thread.start();
+        while (running) {
+        }
     }
 }
