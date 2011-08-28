@@ -24,7 +24,12 @@ namespace lion {
     ConsoleApplication::ConsoleApplication()
     {
         m_szUsage = "usage: %prog [OPTION]... DIR [FILE]...";
-        m_szVersion = "%prog 0.0.1\nCopyright (C) 2011 mad-cad.net\n";
+        m_szVersion = "%prog 0.0.1\nCopyright (C) 2011 mad-cad.net\n"
+            " ___ ____   ____\n"
+            "|_ _|___ \\ / ___|\n"
+            "| |  __) | |    \n"
+            "| | / __/| |___ \n"
+            "|___|_____|\\____|\n";
         m_OptionParser = optparse::OptionParser()
         .usage(m_szUsage)
         .version(m_szVersion);
@@ -32,8 +37,6 @@ namespace lion {
         m_OptionParser.add_option("-h").action("help").help("alternative help");
         m_OptionParser.add_option("-v").action("version").help("alternative version");
         m_Logger.addSink(lionheart::core::LogSinkPtr(new lionheart::core::ConsoleSink("out")));
-        m_Logger.warning() << "App started";
-        m_Logger.flush();
 
         running = true;
 
