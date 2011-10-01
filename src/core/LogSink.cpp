@@ -50,8 +50,8 @@ void lionheart::core::ConsoleSink::writeMessage(LogLevel level, const std::strin
                                  "CRITICAL: " };
 
     boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
-    boost::posix_time::time_duration tod = now.time_of_day();
-    std::cerr << now.date() << " " << tod << " " << pre[static_cast<int>(level)] << msg << std::endl;
+    std::cerr << boost::posix_time::to_simple_string(now) << " " <<  pre[static_cast<int>(level)] << msg << std::endl;
+    
 }
 
 lionheart::core::FileSink::FileSink(const std::string& name) :

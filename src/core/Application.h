@@ -21,16 +21,18 @@
 #include "core/Singleton.h"
 #include "core/Log.h"
 
+
+#define LOGGER lionheart::core::Log::getInstance()
+
 namespace lionheart {
     namespace core {
         class Application {
         protected:
-            lionheart::core::Log m_Logger;
             Application();
             ~Application();
         public:
             lionheart::core::Log * getLogger();
-            virtual int run(int argc,const char * argv[]) = 0;
+            virtual int run(int argc, const char * argv[]) = 0;
         };
     }
 }

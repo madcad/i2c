@@ -1,10 +1,3 @@
-FIND_PACKAGE(Curses)
-
-IF (CURSES_FOUND)
-    include_directories (${CURSES_INCLUDE_DIR})
-    ADD_DEFINITIONS ( "-DHAS_CURSES")
-ENDIF()
-
 add_library (lionheart_core
     Application.cpp
     LogSink.cpp
@@ -12,4 +5,4 @@ add_library (lionheart_core
     Singleton.cpp
 )
 
-target_link_libraries(lionheart_core lionheart ${CURSES_LIBRARIES})
+target_link_libraries(lionheart_core lionheart)
