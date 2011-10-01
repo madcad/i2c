@@ -23,11 +23,13 @@
 #define LOG_H_
 
 #include "core/LogSink.h"
+#include "core/Singleton.h"
 #include "Exceptions.h"
 
 namespace lionheart {
     namespace core {
-        class Log {
+        class Log : public lionheart::core::Singleton<Log> {
+            friend class lionheart::core::Singleton<Log>;
         public:
             Log();
             ~Log();

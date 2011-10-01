@@ -17,6 +17,8 @@
 #ifndef _INPUTTHREAD_H_
 #define _INPUTTHREAD_H_
 
+#include <boost/thread.hpp>
+
 namespace lion {
     class InputThread
     {

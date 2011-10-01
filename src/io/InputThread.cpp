@@ -16,7 +16,7 @@
 
 
 #include "InputThread.h"
-#include "ConsoleApplication.h"
+#include "core/Application.h"
 #include <iostream>
 
 namespace lion {
@@ -42,6 +42,5 @@ namespace lion {
             if (input == "exit")
                 break;
         }
-        ConsoleApplication::getInstance()->running = false;
     }
 }

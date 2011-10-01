@@ -32,9 +32,10 @@ lionheart::core::Application::Application() {
 }
 
 lionheart::core::Application::~Application() {
-    m_Logger.flush();
+    LOGGER->flush();
+    LOGGER->destroy();
 }
 
 lionheart::core::Log * lionheart::core::Application::getLogger() {
-    return &m_Logger;
+    return LOGGER;
 }
