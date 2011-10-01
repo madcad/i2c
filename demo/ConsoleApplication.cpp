@@ -36,7 +36,7 @@ namespace lion {
 
         m_OptionParser.add_option("-h").action("help").help("alternative help");
         m_OptionParser.add_option("-v").action("version").help("alternative version");
-        m_Logger.addSink(lionheart::core::LogSinkPtr(new lionheart::core::ConsoleSink("out")));
+        LOGGER->addSink(lionheart::core::LogSinkPtr(new lionheart::core::ConsoleSink("out")));
 
         running = true;
 
@@ -44,7 +44,7 @@ namespace lion {
 
     ConsoleApplication::~ConsoleApplication() {
         // TODO Auto-generated destructor stub
-        this->getLogger()->flush();
+        LOGGER->flush();
     }
 
     int ConsoleApplication::run(int argc, const char** argv) {
@@ -57,11 +57,13 @@ namespace lion {
         return 0;
     }
     void ConsoleApplication::_run() {
-        this->getLogger()->warning() << "test";
-        InputThread tc;
-        boost::thread thread(&InputThread::run, &tc);
+        LOGGER->warning() << "test";
+        LOGGER->flush();
+        // InputThread tc;
+        // boost::thread thread(&InputThread::run, &tc);
         // thread.join();
         // thread.start();
+        running = false;
         while (running) {
         }
     }

@@ -20,11 +20,8 @@
 #include "core/Application.h"
 #include "core/Singleton.h"
 #include "OptionParser.h"
-#include "InputThread.h"
+#include "io/InputThread.h"
 #include <string>
-#include <boost/thread.hpp>
-
-#define LOGGER ConsoleApplication::getInstance()->getLogger()
 
 namespace lion {
     class InputThread;
@@ -48,3 +45,4 @@ namespace lion {
 }
 
 #endif /* CONSOLEAPPLICATION_H_ */
+
