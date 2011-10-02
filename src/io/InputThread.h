@@ -19,7 +19,8 @@
 
 #include <boost/thread.hpp>
 
-namespace lion {
+namespace lionheart {
+namespace io {
     class InputThread
     {
     protected:
@@ -28,6 +29,7 @@ namespace lion {
         ~InputThread();
         void run();
     };
+}
 }
 
 #endif /* CONSOLEAPPLICATION_H_ */
