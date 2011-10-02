@@ -15,11 +15,12 @@
  */
 
 
-#include "InputThread.h"
+#include "io/InputThread.h"
 #include "core/Application.h"
 #include <iostream>
 
-namespace lion {
+namespace lionheart {
+namespace io {
     InputThread::InputThread()
     {
         LOGGER->note() <<
@@ -36,6 +37,7 @@ namespace lion {
 
     void InputThread::run()
     {
+        // TODO: Implement command pattern.
         std::string input;
         while(true) {
             std::cin >> input;
@@ -43,4 +45,5 @@ namespace lion {
                 break;
         }
     }
+}
 }
