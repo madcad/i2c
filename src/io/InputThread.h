@@ -18,6 +18,7 @@
 #define _INPUTTHREAD_H_
 
 #include <boost/thread.hpp>
+#include <boost/signals2.hpp>
 
 namespace lionheart {
 namespace io {
@@ -25,9 +26,13 @@ namespace io {
     {
     protected:
     public:
+        typedef boost::signals2::signal<void(InputThread *)> InputSignal;
         InputThread();
         ~InputThread();
         void run();
+        InputSignal* getSignal();
+    private:
+        InputSignal m_signal;
     };
 }
 }

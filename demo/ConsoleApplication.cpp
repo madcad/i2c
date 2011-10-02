@@ -16,6 +16,7 @@
 
 
 #include "ConsoleApplication.h"
+#include "io/InputThread.h"
 #include <iostream>
 
 
@@ -47,6 +48,13 @@ namespace lion {
         LOGGER->flush();
     }
 
+    void ConsoleApplication::onCommandExit(lionheart::io::InputThread* InputInstance)
+    {
+        LOGGER->note() << "onCommandExit triggered";
+        LOGGER->flush();
+        running = false;
+    }
+
     int ConsoleApplication::run(int argc, const char** argv) {
         m_OptionParser.parse_args(argc, argv);
         if (argc == 0) {
@@ -59,11 +67,12 @@ namespace lion {
     void ConsoleApplication::_run() {
         LOGGER->warning() << "test";
         LOGGER->flush();
-        // InputThread tc;
-        // boost::thread thread(&InputThread::run, &tc);
-        // thread.join();
-        // thread.start();
-        running = false;
+
+        lionheart::io::InputThread tc;
+        tc.getSignal()->connect(boost::bind(&ConsoleApplication::onCommandExit, this, _1));
+        boost::thread thread(&lionheart::io::InputThread::run, &tc);
+        thread.join();
+
         while (running) {
         }
     }
