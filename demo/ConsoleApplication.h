@@ -40,6 +40,7 @@ namespace lion {
     public:
         ConsoleApplication();
         ~ConsoleApplication();
+        void onCommandExit(lionheart::io::InputThread * InputInstance);
         int run(int argc,const char * argv[]);
     };
 }

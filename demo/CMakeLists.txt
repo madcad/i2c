@@ -9,7 +9,7 @@ FIND_PACKAGE(Boost COMPONENTS thread system signals)
 # target_link_libraries (lion lionheart lionheart_core ${Boost_date_LIBRARY} ${Boost_system_LIBRARY}
 #    ${Boost_thread_LIBRARY})
 link_directories ( ${Boost_LIBRARY_DIRS} )
-target_link_libraries (lion lionheart lionheart_core ${Boost_LIBRARIES})
+target_link_libraries (lion lionheart lionheart_core lionheart_io ${Boost_LIBRARIES})
 install (TARGETS lion
     RUNTIME DESTINATION bin
 )

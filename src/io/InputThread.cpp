@@ -42,8 +42,16 @@ namespace io {
         while(true) {
             std::cin >> input;
             if (input == "exit")
+            {
+                m_signal(this);
                 break;
+            }
         }
+    }
+
+    InputThread::InputSignal* InputThread::getSignal()
+    {
+        return &m_signal;
     }
 }
 }
