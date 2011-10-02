@@ -23,35 +23,31 @@ namespace lionheart {
 namespace io {
     InputThread::InputThread()
     {
-        LOGGER->note() <<
-            "Input thread started with ID: "
-            << boost::this_thread::get_id();
+        LOGGER->note() << "Input thread created.";
         LOGGER->flush();
     }
 
     InputThread::~InputThread()
     {
-        LOGGER->note() <<
-            "Input thread destroyed.";
+        LOGGER->note() << "Input thread destroyed.";
+        LOGGER->flush();
     }
 
     void InputThread::run()
     {
-        // TODO: Implement command pattern.
+        LOGGER->note() << "Input thread started with ID: " << boost::this_thread::get_id();
+        LOGGER->flush();
+
         std::string input;
         while(true) {
             std::cin >> input;
-            if (input == "exit")
-            {
-                m_signal(this);
-                break;
-            }
+            m_commands.runCommand(input);
         }
     }
 
-    InputThread::InputSignal* InputThread::getSignal()
+    core::Command* InputThread::getCommands()
     {
-        return &m_signal;
+        return &m_commands;
     }
 }
 }

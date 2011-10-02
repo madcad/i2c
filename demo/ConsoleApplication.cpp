@@ -17,6 +17,7 @@
 
 #include "ConsoleApplication.h"
 #include "io/InputThread.h"
+#include "Commands.h"
 #include <iostream>
 
 
@@ -48,9 +49,9 @@ namespace lion {
         LOGGER->flush();
     }
 
-    void ConsoleApplication::onCommandExit(lionheart::io::InputThread* InputInstance)
+    void ConsoleApplication::onQuitCommand(lionheart::core::CommandBase* BaseCommand)
     {
-        LOGGER->note() << "onCommandExit triggered";
+        LOGGER->note() << "onQuitCommand triggered";
         LOGGER->flush();
         running = false;
     }
@@ -64,14 +65,18 @@ namespace lion {
         this->_run();
         return 0;
     }
+
     void ConsoleApplication::_run() {
         LOGGER->warning() << "test";
         LOGGER->flush();
 
+        lion::QuitCommand *cmd = new lion::QuitCommand();
+        cmd->getSignal()->connect(boost::bind(&ConsoleApplication::onQuitCommand, this, _1));
+
         lionheart::io::InputThread tc;
-        tc.getSignal()->connect(boost::bind(&ConsoleApplication::onCommandExit, this, _1));
+        tc.getCommands()->addCommand("quit", cmd);
+
         boost::thread thread(&lionheart::io::InputThread::run, &tc);
-        thread.join();
 
         while (running) {
         }

@@ -18,6 +18,7 @@
 #define _CONSOLEAPPLICATION_H_
 
 #include "core/Application.h"
+#include "core/Command.h"
 #include "core/Singleton.h"
 #include "OptionParser.h"
 #include "io/InputThread.h"
@@ -40,7 +41,7 @@ namespace lion {
     public:
         ConsoleApplication();
         ~ConsoleApplication();
-        void onCommandExit(lionheart::io::InputThread * InputInstance);
+        void onQuitCommand(lionheart::core::CommandBase * BaseCommand);
         int run(int argc,const char * argv[]);
     };
 }

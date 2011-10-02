@@ -14,27 +14,43 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _INPUTTHREAD_H_
-#define _INPUTTHREAD_H_
 
-#include <boost/thread.hpp>
+#ifndef COMMAND_H
+#define COMMAND_H
+
 #include <boost/signals2.hpp>
-#include "core/Command.h"
+#include <map>
+#include <llex.h>
+#include <iostream>
 
 namespace lionheart {
-namespace io {
-    class InputThread
+namespace core {
+    class CommandBase
     {
-    protected:
     public:
-        InputThread();
-        ~InputThread();
-        void run();
-        lionheart::core::Command* getCommands();
+        typedef boost::signals2::signal<void(CommandBase *)> CommandSignal;
+        virtual void run()=0;
+        void fireEvent();
+        CommandSignal* getSignal();
+    protected:
+        CommandSignal m_signal;
+    };
+
+    class Command
+    {
+    public:
+        typedef std::map<std::string, CommandBase*> CommandMap;
+        typedef std::pair<std::string, CommandBase*> CommandPair;
     private:
-        lionheart::core::Command m_commands;
+        CommandMap m_commands;
+    public:
+        Command();
+        ~Command();
+        void addCommand(std::string command, CommandBase *instance);
+        CommandBase* getCommand(std::string command);
+        void runCommand(std::string command);
     };
 }
 }
 
-#endif /* CONSOLEAPPLICATION_H_ */
+#endif // COMMAND_H
