@@ -1,5 +1,6 @@
 add_library (lionheart_core
     Application.cpp
+    Command.cpp
     LogSink.cpp
     Log.cpp
     Singleton.cpp

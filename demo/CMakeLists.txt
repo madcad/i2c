@@ -1,6 +1,7 @@
 add_executable (lion
     main.cpp
     ConsoleApplication.cpp
+    Commands.cpp
     # InputThread.cpp
 )
 FIND_PACKAGE(Boost COMPONENTS thread system signals)
