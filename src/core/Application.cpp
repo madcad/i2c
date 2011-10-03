@@ -14,18 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include "Application.h"
 #include "OptionParser.h"
 #include "LogSink.h"
 #include "Log.h"
-
-extern "C"
-{
-    #include "lua.h"
-    #include "lualib.h"
-    #include "lauxlib.h"
-}
 
 
 lionheart::core::Application::Application() {
