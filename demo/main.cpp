@@ -39,7 +39,7 @@ int main (int argc, const char * argv[]) {
     // insert code here...
     try {
         int return_code = lion::ConsoleApplication::getInstance()->run(argc, argv);
-        lion::ConsoleApplication::destroy();
+        lion::ConsoleApplication::getInstance()->destroy();
 
         return return_code;
     } catch (lionheart::Exception& e) {
