@@ -17,6 +17,7 @@
 #include <string>
 #include <vector>
 #include <boost/shared_ptr.hpp>
+#include <boost/utility.hpp>
 #include <memory>
 #include <fstream>
 
@@ -27,22 +28,22 @@ using boost::shared_ptr;
 namespace lionheart {
     namespace core {
         enum LogLevel {
-            LOG_NOTE, LOG_VERBOSE, LOG_WARNING, LOG_ERROR, LOG_CRITICAL
+            LOG_NOTE=0, LOG_VERBOSE, LOG_WARNING, LOG_ERROR, LOG_CRITICAL
         };
 
-        class LogSink {
-
+        class LogSink : public boost::noncopyable {
         public:
             LogSink(const std::string& name);
 
             virtual ~LogSink();
-            virtual void writeMessage(LogLevel level, const std::string& msg)=0;
+            void writeMessage(LogLevel level, const std::string& msg);
             std::string getName() const;
+            void setLevel(LogLevel level);
 
         private:
+            virtual void _writeMessage(LogLevel level, const std::string& msg)=0;
             std::string m_Name;
-            LogSink(const LogSink&);
-            LogSink& operator=(const LogSink&);
+            LogLevel m_Level;
         };
 
         // Type: LogSinkPtr
@@ -55,7 +56,8 @@ namespace lionheart {
             ConsoleSink(const std::string& name);
             virtual ~ConsoleSink();
 
-            virtual void writeMessage(LogLevel level, const std::string& msg);
+        private:
+            virtual void _writeMessage(LogLevel level, const std::string& msg);
         };
 
         class FileSink: public LogSink {
@@ -63,8 +65,8 @@ namespace lionheart {
             FileSink(const std::string& name);
             ~FileSink();
 
-            virtual void writeMessage(LogLevel level, const std::string& msg);
         private:
+            virtual void _writeMessage(LogLevel level, const std::string& msg);
             std::ofstream m_OutStream;
         };
     }
