@@ -39,6 +39,7 @@ namespace io {
         LOGGER->flush();
 
         std::string input;
+        // TODO: Solve the while loop and quit the thread corretly, otherwise it leaks memory.
         while(true) {
             std::cin >> input;
             m_commands.runCommand(input);
