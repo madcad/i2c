@@ -19,7 +19,7 @@
 #include "boost/date_time/posix_time/posix_time.hpp"
 
 lionheart::core::LogSink::LogSink(const std::string& name) :
-    m_Name(name)
+    m_Name(name), m_Level(lionheart::core::LOG_NOTE)
 {
 }
 
@@ -32,6 +32,18 @@ std::string lionheart::core::LogSink::getName() const
     return this->m_Name;
 }
 
+void lionheart::core::LogSink::setLevel(LogLevel level)
+{
+    m_Level = level;
+}
+
+void lionheart::core::LogSink::writeMessage(LogLevel level, const std::string& msg)
+{
+    if (level >= m_Level) {
+        this->_writeMessage(level, msg);
+    }
+}
+
 lionheart::core::ConsoleSink::ConsoleSink(const std::string& name) :
     LogSink(name)
 {
@@ -41,7 +53,7 @@ lionheart::core::ConsoleSink::~ConsoleSink()
 {
 }
 
-void lionheart::core::ConsoleSink::writeMessage(LogLevel level, const std::string& msg)
+void lionheart::core::ConsoleSink::_writeMessage(LogLevel level, const std::string& msg)
 {
     static const char* pre[] = { "    NOTE: ",
                                  " VERBOSE: ",
@@ -51,7 +63,7 @@ void lionheart::core::ConsoleSink::writeMessage(LogLevel level, const std::strin
 
     boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
     std::cerr << boost::posix_time::to_simple_string(now) << " " <<  pre[static_cast<int>(level)] << msg << std::endl;
-    
+
 }
 
 lionheart::core::FileSink::FileSink(const std::string& name) :
@@ -65,7 +77,7 @@ lionheart::core::FileSink::~FileSink()
     m_OutStream.close();
 }
 
-void lionheart::core::FileSink::writeMessage(LogLevel level, const std::string& msg)
+void lionheart::core::FileSink::_writeMessage(LogLevel level, const std::string& msg)
 {
     static const char* pre[] = { "    NOTE: ",
                                  " VERBOSE: ",
