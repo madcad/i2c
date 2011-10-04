@@ -38,6 +38,7 @@ namespace core {
 
     CommandBase* Command::getCommand(std::string command)
     {
+        // TODO: Add tokenzier to support arguments.
         CommandMap::iterator it = m_commands.find(command);
         if (it != m_commands.end() )
         {

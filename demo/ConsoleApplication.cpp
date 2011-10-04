@@ -76,9 +76,10 @@ namespace lion {
         lionheart::io::InputThread tc;
         tc.getCommands()->addCommand("quit", cmd);
 
-        boost::thread thread(&lionheart::io::InputThread::run, &tc);
+        boost::thread *thread = new boost::thread(&lionheart::io::InputThread::run, &tc);
 
         while (running) {
         }
+        delete thread;
     }
 }

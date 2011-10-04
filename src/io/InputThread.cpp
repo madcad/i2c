@@ -38,11 +38,10 @@ namespace io {
         LOGGER->note() << "Input thread started with ID: " << boost::this_thread::get_id();
         LOGGER->flush();
 
-        std::string input;
         // TODO: Solve the while loop and quit the thread corretly, otherwise it leaks memory.
         while(true) {
-            std::cin >> input;
-            m_commands.runCommand(input);
+            std::cin >> m_input;
+            m_commands.runCommand(m_input);
         }
     }
 

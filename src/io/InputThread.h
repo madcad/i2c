@@ -19,6 +19,7 @@
 
 #include <boost/thread.hpp>
 #include <boost/signals2.hpp>
+#include <string>
 #include "core/Command.h"
 
 namespace lionheart {
@@ -33,6 +34,7 @@ namespace io {
         lionheart::core::Command* getCommands();
     private:
         lionheart::core::Command m_commands;
+        std::string m_input;
     };
 }
 }
