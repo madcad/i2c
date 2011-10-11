@@ -20,7 +20,6 @@
 
 #include <boost/signals2.hpp>
 #include <map>
-#include <llex.h>
 #include <iostream>
 
 namespace lionheart {
