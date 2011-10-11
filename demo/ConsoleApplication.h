@@ -22,6 +22,7 @@
 #include "core/Singleton.h"
 #include "OptionParser.h"
 #include "io/InputThread.h"
+#include "bus/I2CDevice.h"
 #include <string>
 
 namespace lion {
@@ -36,6 +37,7 @@ namespace lion {
         bool running;
         std::string m_szUsage;
         std::string m_szVersion;
+        lionheart::bus::I2CTinyUsbDevice * m_i2cDevice;
         optparse::OptionParser m_OptionParser;
         void _run();
     public:
@@ -43,6 +45,7 @@ namespace lion {
         ~ConsoleApplication();
         void onQuitCommand(lionheart::core::CommandBase * BaseCommand);
         int run(int argc,const char * argv[]);
+        lionheart::bus::I2CTinyUsbDevice * getI2CDevice();
     };
 }
 
