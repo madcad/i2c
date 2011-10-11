@@ -39,18 +39,22 @@ namespace lion {
         m_OptionParser.add_option("-h").action("help").help("alternative help");
         m_OptionParser.add_option("-v").action("version").help("alternative version");
         LOGGER->addSink(lionheart::core::LogSinkPtr(new lionheart::core::ConsoleSink("out")));
+        m_i2cDevice = new lionheart::bus::I2CTinyUsbDevice();
 
         running = true;
 
     }
 
     ConsoleApplication::~ConsoleApplication() {
-        // TODO Auto-generated destructor stub
+        delete m_i2cDevice;
         LOGGER->flush();
     }
 
-    void ConsoleApplication::onQuitCommand(lionheart::core::CommandBase* BaseCommand)
-    {
+    lionheart::bus::I2CTinyUsbDevice * ConsoleApplication::getI2CDevice() {
+        return m_i2cDevice;
+    }
+
+    void ConsoleApplication::onQuitCommand(lionheart::core::CommandBase* BaseCommand) {
         LOGGER->note() << "onQuitCommand triggered";
         LOGGER->flush();
         running = false;
@@ -73,8 +77,11 @@ namespace lion {
         lion::QuitCommand *cmd = new lion::QuitCommand();
         cmd->getSignal()->connect(boost::bind(&ConsoleApplication::onQuitCommand, this, _1));
 
+        lion::ScanCommand *scanCmd = new lion::ScanCommand();
+
         lionheart::io::InputThread tc;
         tc.getCommands()->addCommand("quit", cmd);
+        tc.getCommands()->addCommand("scan", scanCmd);
 
         boost::thread *thread = new boost::thread(&lionheart::io::InputThread::run, &tc);
 

@@ -21,5 +21,11 @@ namespace lion {
 
     void QuitCommand::run()
     { }
+    void ScanCommand::run()
+    {
+        ConsoleApplication::getInstance()->getI2CDevice()->scanBus();
+        LOGGER->note() << "Scan bus....";
+        LOGGER->flush();
+    }
 
 }

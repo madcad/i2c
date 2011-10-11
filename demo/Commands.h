@@ -25,5 +25,11 @@ namespace lion {
     public:
         void run();
     };
+
+    class ScanCommand : public lionheart::core::CommandBase
+    {
+    public:
+        void run();
+    };
 }
 #endif // COMMANDS_H
