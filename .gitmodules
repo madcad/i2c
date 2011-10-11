@@ -1,0 +1,3 @@
+[submodule "config-c--"]
+	path = config-c--
+	url = git://github.com/madcad/config-c--.git
