@@ -22,7 +22,6 @@ message(STATUS "BOOST LIB=${Boost_LIBRARY_DIRS}")
 #    src/Log.cpp
 #    src/OptionParser.cpp
 #)
-# add_subdirectory (libs)
 add_subdirectory (config-c--)
 add_subdirectory (src)
 add_subdirectory (demo)

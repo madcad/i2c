@@ -10,8 +10,6 @@ add_library (lionheart
     OptionParser.cpp
 )
 
-
 FIND_PACKAGE(Boost COMPONENTS thread system signals date_time)
-
 link_directories ( ${Boost_LIBRARY_DIRS} )
 target_link_libraries (lionheart lionheart_core lionheart_bus ${Boost_LIBRARIES})
